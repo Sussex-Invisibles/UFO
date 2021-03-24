@@ -1,0 +1,46 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>KiCad BOM Example 5</title>
+    </head>
+    <body>
+    <h1>/home/tony/Sussex-Invisibles/UFO/HW/Electronics/UFOControlDeck/UFOControlDeck.sch</h1>
+    <p>Wed 24 Mar 2021 11:07:39 GMT</p>
+    <p>Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1</p>
+    <p><b>Component Count:</b>104</p>
+    <table>
+    <tr><th style='width:640px'>Ref</th><th>Qnty</th><th>Value</th><th>Part</th><th>Footprint</th><th>Description</th><th>Vendor</th></tr>
+    <tr><td>C1, C2, C3, C4, C5, C6</td><td>6</td><td>10u</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C7, C8, C9, C39, C40, C41</td><td>6</td><td>47u</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C10</td><td>1</td><td>100p</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C11, C12</td><td>2</td><td>10n</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C13</td><td>1</td><td>50n</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C14, C46, C47, C48</td><td>4</td><td>C</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C15, C16, C17, C18, C19, C20, C21, C22, C23, C24, C25, C26, C27, C28, C29, C30, C31, C32, C33, C34, C35, C36, C37, C38, C42, C43, C44, C45</td><td>28</td><td>100n</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>D1, D5, D6, D7, D8, D9, D10, D11, D12, D13</td><td>10</td><td>LED</td><td>Device:LED</td><td>LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td><td>Light emitting diode</td><td></td></tr>
+    <tr><td>D4, D14</td><td>2</td><td>D_Schottky</td><td>Device:D_Schottky</td><td>Diode_SMD:D_SOD-123F</td><td>Schottky diode</td><td></td></tr>
+    <tr><td>J1</td><td>1</td><td>Conn_01x02_Male</td><td>Connector:Conn_01x02_Male</td><td>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</td><td>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J2</td><td>1</td><td>Conn_02x04_Odd_Even</td><td>Connector_Generic:Conn_02x04_Odd_Even</td><td>Connector_PinHeader_1.27mm:PinHeader_2x04_P1.27mm_Vertical_SMD</td><td>Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J10</td><td>1</td><td>Conn_01x02_Male</td><td>Connector:Conn_01x02_Male</td><td>Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical</td><td>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>J13</td><td>1</td><td>Conn_02x08_Odd_Even</td><td>Connector_Generic:Conn_02x08_Odd_Even</td><td>Connector_PinHeader_1.27mm:PinHeader_2x08_P1.27mm_Vertical_SMD</td><td>Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
+    <tr><td>L1</td><td>1</td><td>L</td><td>Device:L</td><td>Inductor_SMD:L_Taiyo-Yuden_NR-40xx</td><td>Inductor</td><td></td></tr>
+    <tr><td>R1, R3, R4, R5, R10, R11, R12, R13, R25, R26, R27, R28, R29, R30</td><td>14</td><td>10k</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R2</td><td>1</td><td>2.21k</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R6</td><td>1</td><td>1.37k</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R7, R8</td><td>2</td><td>100R</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R9, R14, R15</td><td>3</td><td>R</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R16, R17, R18, R19, R20, R21, R22, R23, R24</td><td>9</td><td>1k</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>R31</td><td>1</td><td>2k2</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</td><td>Resistor</td><td></td></tr>
+    <tr><td>U1, U7, U8</td><td>3</td><td>TPSM84209RKHT</td><td>UFOControlDeck-rescue:TPSM84209RKHT-2021-02-02_14-31-31</td><td>TPSM84209:TPSM84209RKHT</td><td></td><td></td></tr>
+    <tr><td>U2</td><td>1</td><td>LM555xM</td><td>Timer:LM555xM</td><td>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</td><td>Timer, 555 compatible, SOIC-8</td><td></td></tr>
+    <tr><td>U3</td><td>1</td><td>ICE40HX8K-BG121</td><td>FPGA_Lattice:ICE40HX8K-BG121</td><td>Package_BGA:BGA-121_9.0x9.0mm_Layout11x11_P0.8mm_Ball0.4mm_Pad0.35mm_NSMD</td><td>iCE40 HX FPGA, 7680 LUTs, 1.2V, BGA-121</td><td></td></tr>
+    <tr><td>U4</td><td>1</td><td>ASDMB-xxxMHz</td><td>Oscillator:ASDMB-xxxMHz</td><td>Oscillator:Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm</td><td>1.8-3.3V SMD Ultra Miniature Crystal Clock Oscillator, Abracon</td><td></td></tr>
+    <tr><td>U5</td><td>1</td><td>SN74LV1T34DBV</td><td>Logic_LevelTranslator:SN74LV1T34DBV</td><td>Package_TO_SOT_SMD:SOT-23-5</td><td>Single Power Supply, Single Buffer GATE, CMOS Logic, Level Shifter, SOT-23-5</td><td></td></tr>
+    <tr><td>U6</td><td>1</td><td>MT25QL128ABA</td><td>UFOControlDeck-rescue:MT25QL128ABA-ants_bits</td><td>Package_DFN_QFN:DFN-8-1EP_6x5mm_P1.27mm_EP2x2mm</td><td></td><td></td></tr><!--TABLEROW-->
+    </table>
+    </body>
+</html>
+    
