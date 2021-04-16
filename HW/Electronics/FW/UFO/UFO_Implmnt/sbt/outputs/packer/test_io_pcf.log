@@ -1,0 +1,9 @@
+OUTPUT led7 	 location (33, 14, 1) 	 F10 	 
+OUTPUT led6 	 location (33, 11, 0) 	 G11 	 
+OUTPUT led5 	 location (33, 6, 1) 	 G10 	 
+OUTPUT led4 	 location (33, 6, 0) 	 H11 	 
+OUTPUT led3 	 location (33, 4, 1) 	 H10 	 
+OUTPUT led2 	 location (33, 3, 1) 	 J11 	 
+OUTPUT led1 	 location (33, 5, 0) 	 J10 	 
+OUTPUT led0 	 location (33, 4, 0) 	 K11 	 
+INPUT  clk 	 location (33, 16, 1) 	 F11 	 

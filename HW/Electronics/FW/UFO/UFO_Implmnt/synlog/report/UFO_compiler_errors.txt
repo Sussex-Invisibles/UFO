@@ -1,0 +1,4 @@
+@E: CD371 :"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":30:19:30:27|No matching overload for "+"
+@E: CD371 :"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":32:19:32:27|No matching overload for "+"
+@E: CD308 :"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":30:19:30:27|Unable to evaluate expression type
+
