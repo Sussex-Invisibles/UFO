@@ -1,0 +1,12 @@
+17:36
+"/home/tony/lscc/iCEcube2.2020.12/sbt_backend/bin/linux/opt/synpwrap/synpwrap" -prj "UFO_syn.prj" -log "/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.srr"
+starting Synthesisrunning Synthesis/home/tony/lscc/iCEcube2.2020.12/synpbase/bin/synplify_pro: 137: [: unexpected operator
+/home/tony/lscc/iCEcube2.2020.12/synpbase/bin/synplify_pro: 151: [: !=: argument expected
+/home/tony/lscc/iCEcube2.2020.12/synpbase/bin/synplify_pro: 321: /home/tony/lscc/iCEcube2.2020.12/synpbase/bin/config/execute: Syntax error: "(" unexpected (expecting ";;")
+Error : can not print out log file stdout.log
+Copyright (C) 1992-2014 Lattice Semiconductor Corporation. All rights reserved.
+Child process exit with 2.
+Error of dumping file /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.srr, 'stdout.log' is instead. 
+Synthesis exit by 2.
+Synthesis failed.
+Synthesis batch mode runtime 0 seconds17:56
