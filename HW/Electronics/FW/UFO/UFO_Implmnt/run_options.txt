@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09L+ice40
 #--  Project file /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/run_options.txt
-#--  Written on Fri Apr 16 18:06:59 2021
+#--  Written on Mon Apr 19 09:41:20 2021
 
 
 #project files

@@ -1,4 +1,3 @@
 [VIC]
-op_eq_toggle3_11_cascade_=ltout:in2
-op_eq_toggle3_17_cascade_=ltout:in2
-toggle_RNOZ0Z_4_cascade_=ltout:in2
+op_eq_toggle3_13_cascade_=ltout:in2
+op_eq_toggle3_20_cascade_=ltout:in3

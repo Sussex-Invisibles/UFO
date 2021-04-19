@@ -1,43 +1,44 @@
-ble_pack count_0_LC_30_12_0 { count_RNO[0], count[0], count_cry_c[0] }
-ble_pack count_1_LC_30_12_1 { count_RNO[1], count[1], count_cry_c[1] }
-ble_pack count_2_LC_30_12_2 { count_RNO[2], count[2], count_cry_c[2] }
-ble_pack count_3_LC_30_12_3 { count_RNO[3], count[3], count_cry_c[3] }
-ble_pack count_4_LC_30_12_4 { count_RNO[4], count[4], count_cry_c[4] }
-ble_pack count_5_LC_30_12_5 { count_RNO[5], count[5], count_cry_c[5] }
-ble_pack count_6_LC_30_12_6 { count_RNO[6], count[6], count_cry_c[6] }
-ble_pack count_7_LC_30_12_7 { count_RNO[7], count[7], count_cry_c[7] }
-clb_pack LT_30_12 { count_0_LC_30_12_0, count_1_LC_30_12_1, count_2_LC_30_12_2, count_3_LC_30_12_3, count_4_LC_30_12_4, count_5_LC_30_12_5, count_6_LC_30_12_6, count_7_LC_30_12_7 }
-set_location LT_30_12 30 12
-ble_pack count_8_LC_30_13_0 { count_RNO[8], count[8], count_cry_c[8] }
-ble_pack count_9_LC_30_13_1 { count_RNO[9], count[9], count_cry_c[9] }
-ble_pack count_10_LC_30_13_2 { count_RNO[10], count[10], count_cry_c[10] }
-ble_pack count_11_LC_30_13_3 { count_RNO[11], count[11], count_cry_c[11] }
-ble_pack count_12_LC_30_13_4 { count_RNO[12], count[12], count_cry_c[12] }
-ble_pack count_13_LC_30_13_5 { count_RNO[13], count[13], count_cry_c[13] }
-ble_pack count_14_LC_30_13_6 { count_RNO[14], count[14], count_cry_c[14] }
-ble_pack count_15_LC_30_13_7 { count_RNO[15], count[15], count_cry_c[15] }
-clb_pack LT_30_13 { count_8_LC_30_13_0, count_9_LC_30_13_1, count_10_LC_30_13_2, count_11_LC_30_13_3, count_12_LC_30_13_4, count_13_LC_30_13_5, count_14_LC_30_13_6, count_15_LC_30_13_7 }
-set_location LT_30_13 30 13
-ble_pack count_16_LC_30_14_0 { count_RNO[16], count[16], count_cry_c[16] }
-ble_pack count_17_LC_30_14_1 { count_RNO[17], count[17], count_cry_c[17] }
-ble_pack count_18_LC_30_14_2 { count_RNO[18], count[18], count_cry_c[18] }
-ble_pack count_19_LC_30_14_3 { count_RNO[19], count[19], count_cry_c[19] }
-ble_pack count_20_LC_30_14_4 { count_RNO[20], count[20], count_cry_c[20] }
-ble_pack count_21_LC_30_14_5 { count_RNO[21], count[21] }
-ble_pack toggle_RNO_0_LC_30_14_7 { toggle_RNO_0 }
-clb_pack LT_30_14 { count_16_LC_30_14_0, count_17_LC_30_14_1, count_18_LC_30_14_2, count_19_LC_30_14_3, count_20_LC_30_14_4, count_21_LC_30_14_5, toggle_RNO_0_LC_30_14_7 }
-set_location LT_30_14 30 14
+ble_pack toggle_RNO_5_LC_31_11_0 { toggle_RNO_5 }
+ble_pack toggle_RNO_2_LC_31_11_1 { toggle_RNO_2 }
+ble_pack toggle_LC_31_11_2 { toggle_RNO, toggle }
+ble_pack toggle_RNO_6_LC_31_11_5 { toggle_RNO_6 }
+clb_pack LT_31_11 { toggle_RNO_5_LC_31_11_0, toggle_RNO_2_LC_31_11_1, toggle_LC_31_11_2, toggle_RNO_6_LC_31_11_5 }
+set_location LT_31_11 31 11
+ble_pack toggle_RNO_4_LC_31_12_1 { toggle_RNO_4 }
 ble_pack toggle_RNO_3_LC_31_12_3 { toggle_RNO_3 }
-clb_pack LT_31_12 { toggle_RNO_3_LC_31_12_3 }
+ble_pack toggle_RNO_1_LC_31_12_5 { toggle_RNO_1 }
+ble_pack toggle_RNO_0_LC_31_12_6 { toggle_RNO_0 }
+clb_pack LT_31_12 { toggle_RNO_4_LC_31_12_1, toggle_RNO_3_LC_31_12_3, toggle_RNO_1_LC_31_12_5, toggle_RNO_0_LC_31_12_6 }
 set_location LT_31_12 31 12
-ble_pack toggle_RNO_4_LC_31_13_1 { toggle_RNO_4 }
-ble_pack toggle_RNO_1_LC_31_13_2 { toggle_RNO_1 }
-ble_pack toggle_LC_31_13_3 { toggle_RNO, toggle }
-ble_pack toggle_RNO_6_LC_31_13_5 { toggle_RNO_6 }
-ble_pack toggle_RNO_5_LC_31_13_6 { toggle_RNO_5 }
-ble_pack toggle_RNO_2_LC_31_13_7 { toggle_RNO_2 }
-clb_pack LT_31_13 { toggle_RNO_4_LC_31_13_1, toggle_RNO_1_LC_31_13_2, toggle_LC_31_13_3, toggle_RNO_6_LC_31_13_5, toggle_RNO_5_LC_31_13_6, toggle_RNO_2_LC_31_13_7 }
-set_location LT_31_13 31 13
+ble_pack count_0_LC_32_11_0 { count_RNO[0], count[0], count_cry_c[0] }
+ble_pack count_1_LC_32_11_1 { count_RNO[1], count[1], count_cry_c[1] }
+ble_pack count_2_LC_32_11_2 { count_RNO[2], count[2], count_cry_c[2] }
+ble_pack count_3_LC_32_11_3 { count_RNO[3], count[3], count_cry_c[3] }
+ble_pack count_4_LC_32_11_4 { count_RNO[4], count[4], count_cry_c[4] }
+ble_pack count_5_LC_32_11_5 { count_RNO[5], count[5], count_cry_c[5] }
+ble_pack count_6_LC_32_11_6 { count_RNO[6], count[6], count_cry_c[6] }
+ble_pack count_7_LC_32_11_7 { count_RNO[7], count[7], count_cry_c[7] }
+clb_pack LT_32_11 { count_0_LC_32_11_0, count_1_LC_32_11_1, count_2_LC_32_11_2, count_3_LC_32_11_3, count_4_LC_32_11_4, count_5_LC_32_11_5, count_6_LC_32_11_6, count_7_LC_32_11_7 }
+set_location LT_32_11 32 11
+ble_pack count_8_LC_32_12_0 { count_RNO[8], count[8], count_cry_c[8] }
+ble_pack count_9_LC_32_12_1 { count_RNO[9], count[9], count_cry_c[9] }
+ble_pack count_10_LC_32_12_2 { count_RNO[10], count[10], count_cry_c[10] }
+ble_pack count_11_LC_32_12_3 { count_RNO[11], count[11], count_cry_c[11] }
+ble_pack count_12_LC_32_12_4 { count_RNO[12], count[12], count_cry_c[12] }
+ble_pack count_13_LC_32_12_5 { count_RNO[13], count[13], count_cry_c[13] }
+ble_pack count_14_LC_32_12_6 { count_RNO[14], count[14], count_cry_c[14] }
+ble_pack count_15_LC_32_12_7 { count_RNO[15], count[15], count_cry_c[15] }
+clb_pack LT_32_12 { count_8_LC_32_12_0, count_9_LC_32_12_1, count_10_LC_32_12_2, count_11_LC_32_12_3, count_12_LC_32_12_4, count_13_LC_32_12_5, count_14_LC_32_12_6, count_15_LC_32_12_7 }
+set_location LT_32_12 32 12
+ble_pack count_16_LC_32_13_0 { count_RNO[16], count[16], count_cry_c[16] }
+ble_pack count_17_LC_32_13_1 { count_RNO[17], count[17], count_cry_c[17] }
+ble_pack count_18_LC_32_13_2 { count_RNO[18], count[18], count_cry_c[18] }
+ble_pack count_19_LC_32_13_3 { count_RNO[19], count[19], count_cry_c[19] }
+ble_pack count_20_LC_32_13_4 { count_RNO[20], count[20], count_cry_c[20] }
+ble_pack count_21_LC_32_13_5 { count_RNO[21], count[21], count_cry_c[21] }
+ble_pack count_22_LC_32_13_6 { count_RNO[22], count[22] }
+clb_pack LT_32_13 { count_16_LC_32_13_0, count_17_LC_32_13_1, count_18_LC_32_13_2, count_19_LC_32_13_3, count_20_LC_32_13_4, count_21_LC_32_13_5, count_22_LC_32_13_6 }
+set_location LT_32_13 32 13
 set_io led7 F10
 set_io led6 G11
 set_io led5 G10

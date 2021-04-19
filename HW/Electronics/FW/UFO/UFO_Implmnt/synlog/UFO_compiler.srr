@@ -9,20 +9,19 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 Running on host :tony-UFODev
 @N: CD720 :"/home/tony/lscc/iCEcube2.2020.12/synpbase/lib/vhd/std.vhd":123:18:123:21|Setting time resolution to ps
 @N:"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":7:7:7:10|Top entity is set to test.
+File /home/tony/Projects/UFO/HW/Electronics/FW/test.vhd changed - recompiling
 File /home/tony/lscc/iCEcube2.2020.12/synpbase/lib/vhd/signed.vhd changed - recompiling
 VHDL syntax check successful!
-
-Compiler output is up to date.  No re-compile necessary
-
+File /home/tony/Projects/UFO/HW/Electronics/FW/test.vhd changed - recompiling
 @N: CD630 :"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":7:7:7:10|Synthesizing work.test.behv.
 Post processing for work.test.behv
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Apr 16 18:06:59 2021
+# Mon Apr 19 09:41:20 2021
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
@@ -35,7 +34,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Apr 16 18:07:00 2021
+# Mon Apr 19 09:41:20 2021
 
 ###########################################################]
 @END
@@ -45,6 +44,6 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Apr 16 18:07:00 2021
+# Mon Apr 19 09:41:20 2021
 
 ###########################################################]

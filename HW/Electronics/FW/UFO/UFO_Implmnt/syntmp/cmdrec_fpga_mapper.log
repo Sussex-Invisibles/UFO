@@ -1,14 +1,14 @@
 /home/tony/lscc/iCEcube2.2020.12/synpbase/bin/m_generic  -prodtype  synplify_pro   -encrypt  -pro  -rundir  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt   -part iCE40HX8K  -package CT256    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synlog/report/UFO_fpga_mapper.xml  -flow mapping  -multisrs  -oedif  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.edf   -autoconstraint  -freq 1.000   /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_prem.srd  -sap  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.sap  -otap  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.tap  -omap  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.map  -devicelib  /home/tony/lscc/iCEcube2.2020.12/synpbase/lib/generic/sb_ice40.v  -sap  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.sap  -ologparam  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/syntmp/UFO.plg  -osyn  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.srm  -prjdir  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/  -prjname  UFO_syn  -log  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synlog/UFO_fpga_mapper.srr 
 rc:1 success:1 runtime:1
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.edf|io:o|time:1618592822|size:38843|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_prem.srd|io:i|time:1618592821|size:3233|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.sap|io:o|time:1618592821|size:367|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.edf|io:o|time:1618821683|size:40111|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_prem.srd|io:i|time:1618821682|size:3242|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.sap|io:o|time:1618821682|size:367|exec:0
 file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.tap|io:o|time:0|size:0|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.map|io:o|time:1618592822|size:27|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.map|io:o|time:1618821683|size:27|exec:0
 file:/home/tony/lscc/iCEcube2.2020.12/synpbase/lib/generic/sb_ice40.v|io:i|time:1618589804|size:220434|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.sap|io:o|time:1618592821|size:367|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/syntmp/UFO.plg|io:o|time:1618592822|size:425|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.srm|io:o|time:1618592822|size:13984|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synlog/UFO_fpga_mapper.srr|io:o|time:1618592822|size:23506|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.sap|io:o|time:1618821682|size:367|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/syntmp/UFO.plg|io:o|time:1618821683|size:425|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/UFO.srm|io:o|time:1618821683|size:14579|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synlog/UFO_fpga_mapper.srr|io:o|time:1618821683|size:23461|exec:0
 file:/home/tony/lscc/iCEcube2.2020.12/synpbase/linux_a_64/m_generic|io:i|time:1618589806|size:32925640|exec:1
 file:/home/tony/lscc/iCEcube2.2020.12/synpbase/bin/m_generic|io:i|time:1618592300|size:347|exec:1

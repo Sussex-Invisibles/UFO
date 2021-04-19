@@ -21,7 +21,7 @@ entity test is
 architecture behv of test is
 
   signal toggle : std_logic := '0';
-  signal count  : std_logic_vector (21 downto 0) := "0000000000000000000000";
+  signal count  : std_logic_vector (22 downto 0) := "00000000000000000000000";
 
   begin
 

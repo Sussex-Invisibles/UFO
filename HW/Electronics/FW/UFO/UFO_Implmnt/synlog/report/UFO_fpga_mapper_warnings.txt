@@ -1,3 +1,3 @@
-@W: FX1039 :"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":30:6:30:7|User-specified initial value defined for instance count[21:0] is being ignored. 
+@W: FX1039 :"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":30:6:30:7|User-specified initial value defined for instance count[22:0] is being ignored. 
 @W: FX1039 :"/home/tony/Projects/UFO/HW/Electronics/FW/test.vhd":30:6:30:7|User-specified initial value defined for instance toggle is being ignored. 
-@W: MT420 |Found inferred clock test|clk with period 6.60ns. Please declare a user-defined clock on object "p:clk"
+@W: MT420 |Found inferred clock test|clk with period 6.55ns. Please declare a user-defined clock on object "p:clk"

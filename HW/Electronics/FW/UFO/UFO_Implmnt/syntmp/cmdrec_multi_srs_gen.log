@@ -1,7 +1,7 @@
 /home/tony/lscc/iCEcube2.2020.12/synpbase/bin/syn_nfilter  -link  -multisrs  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_comp.srs  -osyn  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_mult.srs  -log  /home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synlog/UFO_multi_srs_gen.srr 
-rc:0 success:1 runtime:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_comp.srs|io:i|time:1618592820|size:2210|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_mult.srs|io:o|time:1618592821|size:1936|exec:0
-file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synlog/UFO_multi_srs_gen.srr|io:o|time:1618592821|size:764|exec:0
+rc:0 success:1 runtime:1
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_comp.srs|io:i|time:1618821680|size:2214|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synwork/UFO_mult.srs|io:o|time:1618821682|size:1932|exec:0
+file:/home/tony/Projects/UFO/HW/Electronics/FW/UFO/UFO_Implmnt/synlog/UFO_multi_srs_gen.srr|io:o|time:1618821682|size:764|exec:0
 file:/home/tony/lscc/iCEcube2.2020.12/synpbase/linux_a_64/syn_nfilter|io:i|time:1618589807|size:11473624|exec:1
 file:/home/tony/lscc/iCEcube2.2020.12/synpbase/bin/syn_nfilter|io:i|time:1618592300|size:368|exec:1
