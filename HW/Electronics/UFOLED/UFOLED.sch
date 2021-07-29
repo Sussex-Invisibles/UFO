@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "UFOLED"
 Date ""
-Rev ""
-Comp ""
+Rev "V0.0.1"
+Comp "University of Sussex"
 Comment1 ""
 Comment2 ""
 Comment3 ""

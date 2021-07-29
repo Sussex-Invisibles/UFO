@@ -1,0 +1,71 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L FPGA_Lattice:ICE40HX8K-BG121 U?
+U 1 1 60A3C7C5
+P 5000 3000
+F 0 "U?" H 5380 3003 50  0000 L CNN
+F 1 "ICE40HX8K-BG121" H 5380 2912 50  0000 L CNN
+F 2 "Package_BGA:BGA-121_9.0x9.0mm_Layout11x11_P0.8mm_Ball0.4mm_Pad0.35mm_NSMD" H 5000 1550 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40" H 4150 4000 50  0001 C CNN
+	1    5000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L FPGA_Lattice:ICE40HX8K-BG121 U?
+U 2 1 60A3ECF9
+P 7800 3100
+F 0 "U?" H 8180 3203 50  0000 L CNN
+F 1 "ICE40HX8K-BG121" H 8180 3112 50  0000 L CNN
+F 2 "Package_BGA:BGA-121_9.0x9.0mm_Layout11x11_P0.8mm_Ball0.4mm_Pad0.35mm_NSMD" H 7800 1650 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40" H 6950 4100 50  0001 C CNN
+	2    7800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L FPGA_Lattice:ICE40HX8K-BG121 U?
+U 3 1 60A407B6
+P 3000 4300
+F 0 "U?" H 3000 2975 50  0000 C CNN
+F 1 "ICE40HX8K-BG121" H 3000 2884 50  0000 C CNN
+F 2 "Package_BGA:BGA-121_9.0x9.0mm_Layout11x11_P0.8mm_Ball0.4mm_Pad0.35mm_NSMD" H 3000 2850 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40" H 2150 5300 50  0001 C CNN
+	3    3000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L FPGA_Lattice:ICE40HX8K-BG121 U?
+U 4 1 60A4203B
+P 6100 5550
+F 0 "U?" H 6480 5678 50  0000 L CNN
+F 1 "ICE40HX8K-BG121" H 6480 5587 50  0000 L CNN
+F 2 "Package_BGA:BGA-121_9.0x9.0mm_Layout11x11_P0.8mm_Ball0.4mm_Pad0.35mm_NSMD" H 6100 4100 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40" H 5250 6550 50  0001 C CNN
+	4    6100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L FPGA_Lattice:ICE40HX8K-BG121 U?
+U 5 1 60A4455E
+P 10300 2200
+F 0 "U?" H 10300 1411 50  0000 C CNN
+F 1 "ICE40HX8K-BG121" H 10300 1320 50  0000 C CNN
+F 2 "Package_BGA:BGA-121_9.0x9.0mm_Layout11x11_P0.8mm_Ball0.4mm_Pad0.35mm_NSMD" H 10300 750 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40" H 9450 3200 50  0001 C CNN
+	5    10300 2200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
