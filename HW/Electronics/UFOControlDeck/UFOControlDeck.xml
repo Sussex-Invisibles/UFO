@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/tony/Sussex-Invisibles/UFO/HW/Electronics/UFOControlDeck/UFOControlDeck.sch</source>
-    <date>Wed 24 Mar 2021 11:07:39 GMT</date>
-    <tool>Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1</tool>
+    <date>Fri 30 Jul 2021 10:05:40 BST</date>
+    <tool>Eeschema 5.1.10-88a1d61d58~88~ubuntu20.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>UFOControlDeck</title>
@@ -23,6 +23,10 @@
       <value>ICE40HX8K-BG121</value>
       <footprint>Package_BGA:BGA-121_9.0x9.0mm_Layout11x11_P0.8mm_Ball0.4mm_Pad0.35mm_NSMD</footprint>
       <datasheet>http://www.latticesemi.com/Products/FPGAandCPLD/iCE40</datasheet>
+      <fields>
+        <field name="digikey#">220-2148-ND</field>
+        <field name="manf#">ICE40HX8K-BG121</field>
+      </fields>
       <libsource lib="FPGA_Lattice" part="ICE40HX8K-BG121" description="iCE40 HX FPGA, 7680 LUTs, 1.2V, BGA-121"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FF33049</tstamp>
