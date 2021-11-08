@@ -1,0 +1,24 @@
+Drill report for /home/tony/Sussex-Invisibles/UFO/HW/Electronics/UFOMothership/UFOMothership.kicad_pcb
+Created on Mon 01 Nov 2021 14:16:57 GMT
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'UFOMothership-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.400mm  0.0157"  (12 holes)
+    T2  0.500mm  0.0197"  (32 holes)
+    T3  3.200mm  0.1260"  (4 holes)
+
+    Total plated holes count 48
+
+
+Drill file 'UFOMothership-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0
