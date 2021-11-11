@@ -2396,4 +2396,10 @@ F 3 "~" H 15150 9950 50  0001 C CNN
 	1    15150 9950
 	-1   0    0    1   
 $EndComp
+Text Label 15500 11000 0    50   ~ 0
+DONE
+Text Label 15500 11200 0    50   ~ 0
+INITN
+Text Label 15500 11400 0    50   ~ 0
+PROGRAMN
 $EndSCHEMATC

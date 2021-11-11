@@ -1,0 +1,29 @@
+Drill report for /home/tony/Sussex-Invisibles/UFO/HW/Electronics/UFOControlDeck/UFOControlDeck.kicad_pcb
+Created on Tue 09 Nov 2021 12:00:17 GMT
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  In1.Cu                    in1
+    L3 :  In2.Cu                    in2
+    L4 :  B.Cu                      back
+
+
+Drill file 'UFOControlDeck-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.200mm  0.0079"  (36 holes)
+    T2  0.250mm  0.0098"  (78 holes)
+    T3  0.400mm  0.0157"  (33 holes)
+    T4  0.650mm  0.0256"  (4 holes)
+    T5  1.000mm  0.0394"  (2 holes)
+    T6  4.300mm  0.1693"  (4 holes)
+
+    Total plated holes count 157
+
+
+Drill file 'UFOControlDeck-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0
