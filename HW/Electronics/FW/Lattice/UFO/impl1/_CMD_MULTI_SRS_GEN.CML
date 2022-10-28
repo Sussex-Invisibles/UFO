@@ -1,0 +1,1 @@
+ -link  -multisrs  /home/tony/Lattice/UFO/impl1/synwork/impl1_comp.srs  -osyn  /home/tony/Lattice/UFO/impl1/synwork/impl1_mult.srs  -log  /home/tony/Lattice/UFO/impl1/synlog/impl1_multi_srs_gen.srr 

@@ -1,0 +1,20 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MT206 |Auto Constrain mode is enabled
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":52:8:52:9|Replicating instance un1_armed_1 (in view: work.ufo(behv)) with 16 loads 1 time to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[7] (in view: work.ufo(behv)) with 12 loads 2 times to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[9] (in view: work.ufo(behv)) with 11 loads 1 time to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[10] (in view: work.ufo(behv)) with 10 loads 1 time to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[11] (in view: work.ufo(behv)) with 10 loads 1 time to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[0] (in view: work.ufo(behv)) with 15 loads 2 times to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[8] (in view: work.ufo(behv)) with 14 loads 2 times to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[3] (in view: work.ufo(behv)) with 13 loads 2 times to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[4] (in view: work.ufo(behv)) with 13 loads 2 times to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[6] (in view: work.ufo(behv)) with 13 loads 1 time to improve timing.
+@N: FX271 :"/home/tony/Lattice/ufo.vhd":51:6:51:7|Replicating instance pulse_timeout[5] (in view: work.ufo(behv)) with 13 loads 1 time to improve timing.
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: FX1056 |Writing EDF file: /home/tony/Lattice/UFO/impl1/impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

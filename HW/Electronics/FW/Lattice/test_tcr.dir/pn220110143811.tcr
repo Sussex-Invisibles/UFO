@@ -1,0 +1,7 @@
+#Start recording tcl command: 1/10/2022 14:29:10
+#Project Location: /home/tony/Lattice; Project name: test
+prj_project new -name "test" -impl "impl1" -dev LAMXO3D-4300HC-5BG256E -synthesis "lse"
+prj_project save
+prj_src add "/home/tony/Lattice/ufo.vhd"
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 1/10/2022 14:38:11

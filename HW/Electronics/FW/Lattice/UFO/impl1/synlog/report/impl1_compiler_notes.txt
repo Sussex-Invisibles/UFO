@@ -1,0 +1,8 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N:"/home/tony/Lattice/ufo.vhd":6:7:6:9|Top entity is set to ufo.
+@N: CD630 :"/home/tony/Lattice/ufo.vhd":6:7:6:9|Synthesizing work.ufo.behv.
+@N|Running in 64-bit mode
+@N: NF107 :"/home/tony/Lattice/ufo.vhd":6:7:6:9|Selected library: work cell: ufo view behv as top level
+@N: NF107 :"/home/tony/Lattice/ufo.vhd":6:7:6:9|Selected library: work cell: ufo view behv as top level
+

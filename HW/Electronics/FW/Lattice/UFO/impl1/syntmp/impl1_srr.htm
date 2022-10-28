@@ -1,0 +1,891 @@
+<html><body><samp><pre>
+<!@TC:1642519739>
+#Build: Synplify Pro (R) Q-2020.03L-SP1, Build 184R, Oct 30 2020
+#install: /usr/local/diamond/3.12/synpbase
+#OS: Linux 
+#Hostname: localhost.localdomain
+
+# Tue Jan 18 15:28:59 2022
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport1></a>Synopsys HDL Compiler, Version comp202003synp2, Build 184R, Built Oct 30 2020 10:19:07, @1018816</a>
+
+@N: : <!@TM:1642519739> | Running in 64-bit mode 
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport2></a>Synopsys VHDL Compiler, Version comp202003synp2, Build 184R, Built Oct 30 2020 10:19:07, @1018816</a>
+
+@N: : <!@TM:1642519739> | Running in 64-bit mode 
+@N: : <a href="/home/tony/Lattice/ufo.vhd:6:7:6:10:@N::@XP_MSG">ufo.vhd(6)</a><!@TM:1642519739> | Top entity is set to ufo.
+VHDL syntax check successful!
+@N:<a href="@N:CD630:@XP_HELP">CD630</a> : <a href="/home/tony/Lattice/ufo.vhd:6:7:6:10:@N:CD630:@XP_MSG">ufo.vhd(6)</a><!@TM:1642519739> | Synthesizing work.ufo.behv.
+<font color=#A52A2A>@W:<a href="@W:CD434:@XP_HELP">CD434</a> : <a href="/home/tony/Lattice/ufo.vhd:103:12:103:15:@W:CD434:@XP_MSG">ufo.vhd(103)</a><!@TM:1642519739> | Signal clk in the sensitivity list is not used in the process. Make sure all variables in the sensitivity list are referenced in the process.</font>
+<font color=#A52A2A>@W:<a href="@W:CG296:@XP_HELP">CG296</a> : <a href="/home/tony/Lattice/ufo.vhd:103:4:103:11:@W:CG296:@XP_MSG">ufo.vhd(103)</a><!@TM:1642519739> | Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="/home/tony/Lattice/ufo.vhd:111:9:111:13:@W:CG290:@XP_MSG">ufo.vhd(111)</a><!@TM:1642519739> | Referenced variable fire is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="/home/tony/Lattice/ufo.vhd:108:30:108:43:@W:CG290:@XP_MSG">ufo.vhd(108)</a><!@TM:1642519739> | Referenced variable arm_toggle_s1 is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="/home/tony/Lattice/ufo.vhd:108:13:108:23:@W:CG290:@XP_MSG">ufo.vhd(108)</a><!@TM:1642519739> | Referenced variable arm_toggle is not in sensitivity list.</font>
+<font color=#A52A2A>@W:<a href="@W:CG290:@XP_HELP">CG290</a> : <a href="/home/tony/Lattice/ufo.vhd:105:9:105:18:@W:CG290:@XP_MSG">ufo.vhd(105)</a><!@TM:1642519739> | Referenced variable timed_out is not in sensitivity list.</font>
+Post processing for work.ufo.behv
+Running optimization stage 1 on ufo .......
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="/home/tony/Lattice/ufo.vhd:120:2:120:4:@W:CL169:@XP_MSG">ufo.vhd(120)</a><!@TM:1642519739> | Pruning unused register heartbeat_count_4(23 downto 0). Make sure that there are no unused intermediate registers.</font>
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="/home/tony/Lattice/ufo.vhd:120:2:120:4:@W:CL169:@XP_MSG">ufo.vhd(120)</a><!@TM:1642519739> | Pruning unused register heartbeat_flash_3. Make sure that there are no unused intermediate registers.</font>
+<font color=#A52A2A>@W:<a href="@W:CL117:@XP_HELP">CL117</a> : <a href="/home/tony/Lattice/ufo.vhd:105:5:105:7:@W:CL117:@XP_MSG">ufo.vhd(105)</a><!@TM:1642519739> | Latch generated from process for signal armed; possible missing assignment in an if or case statement.</font>
+<font color=#A52A2A>@W:<a href="@W:CL117:@XP_HELP">CL117</a> : <a href="/home/tony/Lattice/ufo.vhd:105:5:105:7:@W:CL117:@XP_MSG">ufo.vhd(105)</a><!@TM:1642519739> | Latch generated from process for signal arm_toggle_s1; possible missing assignment in an if or case statement.</font>
+Running optimization stage 2 on ufo .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+Linked File:  <a href="/home/tony/Lattice/UFO/impl1/synwork/layer0.rt.csv:@XP_FILE">layer0.rt.csv</a>
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 147MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 18 15:28:59 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport3></a>Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 184R, Built Oct 30 2020 10:19:07, @1018816</a>
+
+@N: : <!@TM:1642519739> | Running in 64-bit mode 
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="/home/tony/Lattice/ufo.vhd:6:7:6:10:@N:NF107:@XP_MSG">ufo.vhd(6)</a><!@TM:1642519739> | Selected library: work cell: ufo view behv as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="/home/tony/Lattice/ufo.vhd:6:7:6:10:@N:NF107:@XP_MSG">ufo.vhd(6)</a><!@TM:1642519739> | Selected library: work cell: ufo view behv as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 137MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 18 15:28:59 2022
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+Linked File:  <a href="/home/tony/Lattice/UFO/impl1/synwork/impl1_comp.rt.csv:@XP_FILE">impl1_comp.rt.csv</a>
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 55MB peak: 55MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 18 15:28:59 2022
+
+###########################################################]
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1642519739>
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=compilerReport4></a>Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 184R, Built Oct 30 2020 10:19:07, @1018816</a>
+
+@N: : <!@TM:1642519741> | Running in 64-bit mode 
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="/home/tony/Lattice/ufo.vhd:6:7:6:10:@N:NF107:@XP_MSG">ufo.vhd(6)</a><!@TM:1642519741> | Selected library: work cell: ufo view behv as top level
+@N:<a href="@N:NF107:@XP_HELP">NF107</a> : <a href="/home/tony/Lattice/ufo.vhd:6:7:6:10:@N:NF107:@XP_MSG">ufo.vhd(6)</a><!@TM:1642519741> | Selected library: work cell: ufo view behv as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 137MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 18 15:29:01 2022
+
+###########################################################]
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1642519739>
+Premap Report
+
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1642519739>
+# Tue Jan 18 15:29:01 2022
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=mapperReport5></a>Synopsys Lattice Technology Pre-mapping, Version map202003lat, Build 172R, Built Nov  2 2020 10:35:33, @1018937</a>
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 204MB peak: 204MB)
+
+@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1642519742> | No constraint file specified. 
+Linked File:  <a href="/home/tony/Lattice/UFO/impl1/impl1_scck.rpt:@XP_FILE">impl1_scck.rpt</a>
+See clock summary report "/home/tony/Lattice/UFO/impl1/impl1_scck.rpt"
+@N:<a href="@N:MF916:@XP_HELP">MF916</a> : <!@TM:1642519742> | Option synthesis_strategy=base is enabled.  
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1642519742> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1642519742> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 215MB peak: 216MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 215MB peak: 216MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 222MB peak: 222MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 224MB peak: 224MB)
+
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1642519742> | Applying initial value "0" on instance arm_toggle. 
+<font color=#A52A2A>@W:<a href="@W:FX474:@XP_HELP">FX474</a> : <!@TM:1642519742> | User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. </font> 
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1642519742> | Applying initial value "0" on instance fire. 
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1642519742> | Applying initial value "0" on instance toggle. 
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1642519742> | Applying initial value "0" on instance arm_toggle_s1. 
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1642519742> | Applying initial value "0" on instance timed_out. 
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1642519742> | Applying initial value "00000000" on instance led_arm[7:0]. 
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1642519742> | Applying initial value "0" on instance armed. 
+<font color=#A52A2A>@W:<a href="@W:BN132:@XP_HELP">BN132</a> : <a href="/home/tony/Lattice/ufo.vhd:35:5:35:7:@W:BN132:@XP_MSG">ufo.vhd(35)</a><!@TM:1642519742> | Removing sequential instance toggle because it is equivalent to instance fire. To keep the instance, apply constraint syn_preserve=1 on the instance.</font>
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+@N:<a href="@N:FX1184:@XP_HELP">FX1184</a> : <!@TM:1642519742> | Applying syn_allowed_resources blockrams=432 on top level netlist ufo  
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+
+<a name=mapperReport6></a>Clock Summary</a>
+******************
+
+          Start           Requested     Requested     Clock        Clock                     Clock
+Level     Clock           Frequency     Period        Type         Group                     Load 
+--------------------------------------------------------------------------------------------------
+0 -       System          1.0 MHz       1000.000      system       system_clkgroup           1    
+                                                                                                  
+0 -       ufo|clk         260.7 MHz     3.836         inferred     Autoconstr_clkgroup_0     25   
+                                                                                                  
+0 -       ufo|trigger     1.0 MHz       1000.000      inferred     Autoconstr_clkgroup_1     2    
+==================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                Clock     Source            Clock Pin                 Non-clock Pin     Non-clock Pin
+Clock           Load      Pin               Seq Example               Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------------------
+System          1         -                 arm_toggle_s1.C           -                 -            
+                                                                                                     
+ufo|clk         25        clk(port)         pulse_timeout[15:0].C     -                 -            
+                                                                                                     
+ufo|trigger     2         trigger(port)     arm_toggle.C              -                 -            
+=====================================================================================================
+
+<font color=#A52A2A>@W:<a href="@W:MT531:@XP_HELP">MT531</a> : <a href="/home/tony/Lattice/ufo.vhd:105:5:105:7:@W:MT531:@XP_MSG">ufo.vhd(105)</a><!@TM:1642519742> | Found signal identified as System clock which controls 1 sequential elements including arm_toggle_s1.  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. </font>
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@W:MT529:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519742> | Found inferred clock ufo|clk which controls 25 sequential elements including led_arm[7]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="/home/tony/Lattice/ufo.vhd:35:5:35:7:@W:MT529:@XP_MSG">ufo.vhd(35)</a><!@TM:1642519742> | Found inferred clock ufo|trigger which controls 2 sequential elements including fire. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+<a name=clockReport7></a>#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[</a>
+
+2 non-gated/non-generated clock tree(s) driving 27 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 2 clock pin(s) of sequential element(s)
+0 instances converted, 2 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+<a href="@|L:/home/tony/Lattice/UFO/impl1/synwork/impl1_prem.srm@|S:clk@|E:led_arm[7]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1 @XP_NAMES_BY_PROP">ClockId_0_1</a>       clk                 port                   25         led_arm[7]     
+<a href="@|L:/home/tony/Lattice/UFO/impl1/synwork/impl1_prem.srm@|S:trigger@|E:fire@|F:@syn_dgcc_clockid0_3==1@|M:ClockId_0_3 @XP_NAMES_BY_PROP">ClockId_0_3</a>       trigger             port                   2          fire           
+=======================================================================================
+============================================================= Gated/Generated Clocks =============================================================
+Clock Tree ID     Driving Element                Drive Element Type     Unconverted Fanout     Sample Instance     Explanation                    
+--------------------------------------------------------------------------------------------------------------------------------------------------
+<a href="@|L:/home/tony/Lattice/UFO/impl1/synwork/impl1_prem.srm@|S:un1_timed_out_1.OUT[0]@|E:armed@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0 @XP_NAMES_BY_PROP">ClockId_0_0</a>       un1_timed_out_1.OUT[0]         mux                    1                      armed               Clock source is invalid for GCC
+<a href="@|L:/home/tony/Lattice/UFO/impl1/synwork/impl1_prem.srm@|S:arm_toggle_s1_0_sqmuxa.OUT@|E:arm_toggle_s1@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2 @XP_NAMES_BY_PROP">ClockId_0_2</a>       arm_toggle_s1_0_sqmuxa.OUT     and                    1                      arm_toggle_s1       Clock source is invalid for GCC
+==================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N:<a href="@N:FX1143:@XP_HELP">FX1143</a> : <!@TM:1642519742> | Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized. 
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Jan 18 15:29:02 2022
+
+###########################################################]
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1642519739>
+Map & Optimize Report
+
+
+</pre></samp></body></html>
+<html><body><samp><pre>
+<!@TC:1642519739>
+# Tue Jan 18 15:29:02 2022
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+<a name=mapperReport8></a>Synopsys Lattice Technology Mapper, Version map202003lat, Build 172R, Built Nov  2 2020 10:35:33, @1018937</a>
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 204MB peak: 204MB)
+
+@N:<a href="@N:MF916:@XP_HELP">MF916</a> : <!@TM:1642519744> | Option synthesis_strategy=base is enabled.  
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1642519744> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1642519744> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 213MB peak: 213MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 213MB peak: 213MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 219MB peak: 219MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 223MB peak: 223MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 251MB peak: 251MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N:<a href="@N:MT206:@XP_HELP">MT206</a> : <!@TM:1642519744> | Auto Constrain mode is enabled 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
+
+<font color=#A52A2A>@W:<a href="@W:FX474:@XP_HELP">FX474</a> : <!@TM:1642519744> | User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. </font> 
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 257MB peak: 257MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -2.11ns		  60 /        27
+   2		0h:00m:00s		    -2.11ns		  62 /        27
+   3		0h:00m:00s		    -2.11ns		  62 /        27
+   4		0h:00m:00s		    -2.11ns		  62 /        27
+   5		0h:00m:00s		    -2.11ns		  62 /        27
+   6		0h:00m:00s		    -2.11ns		  62 /        27
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:52:8:52:10:@N:FX271:@XP_MSG">ufo.vhd(52)</a><!@TM:1642519744> | Replicating instance un1_armed_1 (in view: work.ufo(behv)) with 16 loads 1 time to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[7] (in view: work.ufo(behv)) with 12 loads 2 times to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[9] (in view: work.ufo(behv)) with 11 loads 1 time to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[10] (in view: work.ufo(behv)) with 10 loads 1 time to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[11] (in view: work.ufo(behv)) with 10 loads 1 time to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[0] (in view: work.ufo(behv)) with 15 loads 2 times to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[8] (in view: work.ufo(behv)) with 14 loads 2 times to improve timing.
+Timing driven replication report
+Added 9 Registers via timing driven replication
+Added 3 LUTs via timing driven replication
+
+   7		0h:00m:00s		    -2.18ns		  86 /        36
+   8		0h:00m:00s		    -2.50ns		  85 /        36
+   9		0h:00m:00s		    -2.12ns		  85 /        36
+  10		0h:00m:00s		    -2.29ns		  88 /        36
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[3] (in view: work.ufo(behv)) with 13 loads 2 times to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[4] (in view: work.ufo(behv)) with 13 loads 2 times to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[6] (in view: work.ufo(behv)) with 13 loads 1 time to improve timing.
+@N:<a href="@N:FX271:@XP_HELP">FX271</a> : <a href="/home/tony/Lattice/ufo.vhd:51:6:51:8:@N:FX271:@XP_MSG">ufo.vhd(51)</a><!@TM:1642519744> | Replicating instance pulse_timeout[5] (in view: work.ufo(behv)) with 13 loads 1 time to improve timing.
+Added 6 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+
+  11		0h:00m:00s		    -1.67ns		  89 /        42
+  12		0h:00m:00s		    -1.63ns		  91 /        42
+  13		0h:00m:01s		    -1.64ns		  93 /        42
+  14		0h:00m:01s		    -2.24ns		  98 /        42
+  15		0h:00m:01s		    -2.48ns		  98 /        42
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 258MB peak: 258MB)
+
+@N:<a href="@N:FX164:@XP_HELP">FX164</a> : <!@TM:1642519744> | The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.   
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 258MB peak: 258MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 259MB peak: 259MB)
+
+Writing Analyst data base /home/tony/Lattice/UFO/impl1/synwork/impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 259MB peak: 259MB)
+
+Writing EDIF Netlist and constraint files
+@N:<a href="@N:FX1056:@XP_HELP">FX1056</a> : <!@TM:1642519744> | Writing EDF file: /home/tony/Lattice/UFO/impl1/impl1.edi 
+@N:<a href="@N:BW106:@XP_HELP">BW106</a> : <!@TM:1642519744> | Synplicity Constraint File capacitance units using default value of 1pF  
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 263MB peak: 263MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 263MB peak: 263MB)
+
+<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1642519744> | Found inferred clock ufo|clk with period 6.02ns. Please declare a user-defined clock on port clk.</font> 
+<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1642519744> | Found inferred clock ufo|trigger with period 1000.00ns. Please declare a user-defined clock on port trigger.</font> 
+
+
+<a name=timingReport9></a>##### START OF TIMING REPORT #####[</a>
+# Timing report written on Tue Jan 18 15:29:04 2022
+#
+
+
+Top view:               ufo
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:1642519744> | This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report. 
+
+@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:1642519744> | Clock constraints include only register-to-register paths associated with each individual clock. 
+
+
+
+<a name=performanceSummary10></a>Performance Summary</a>
+*******************
+
+
+Worst slack in design: -1.062
+
+                   Requested     Estimated     Requested     Estimated                 Clock        Clock                
+Starting Clock     Frequency     Frequency     Period        Period        Slack       Type         Group                
+-------------------------------------------------------------------------------------------------------------------------
+ufo|clk            166.2 MHz     141.3 MHz     6.018         7.079         -1.062      inferred     Autoconstr_clkgroup_0
+ufo|trigger        1.0 MHz       824.1 MHz     1000.000      1.213         998.787     inferred     Autoconstr_clkgroup_1
+System             1.0 MHz       NA            1000.000      NA            NA          system       system_clkgroup      
+=========================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+<a name=clockRelationships11></a>Clock Relationships</a>
+*******************
+
+Clocks                |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------
+Starting     Ending   |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------
+ufo|clk      ufo|clk  |  6.018       -1.062   |  No paths    -      |  No paths    -      |  No paths    -    
+ufo|trigger  System   |  1000.000    998.787  |  No paths    -      |  No paths    -      |  No paths    -    
+==============================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+<a name=interfaceInfo12></a>Interface Information </a>
+*********************
+
+No IO constraint found
+
+
+
+====================================
+<a name=clockReport13></a>Detailed Report for Clock: ufo|clk</a>
+====================================
+
+
+
+<a name=startingSlack14></a>Starting Points with Worst Slack</a>
+********************************
+
+                         Starting                                                   Arrival           
+Instance                 Reference     Type        Pin     Net                      Time        Slack 
+                         Clock                                                                        
+------------------------------------------------------------------------------------------------------
+pulse_timeout[1]         ufo|clk       FD1S3AX     Q       pulse_timeout[1]         1.268       -1.062
+pulse_timeout[2]         ufo|clk       FD1S3AX     Q       pulse_timeout[2]         1.268       -1.062
+pulse_timeout[9]         ufo|clk       FD1S3IX     Q       pulse_timeout[9]         1.228       -1.022
+pulse_timeout[10]        ufo|clk       FD1S3IX     Q       pulse_timeout[10]        1.228       -1.022
+pulse_timeout[11]        ufo|clk       FD1S3IX     Q       pulse_timeout[11]        1.228       -1.022
+pulse_timeout[0]         ufo|clk       FD1S3IX     Q       pulse_timeout[0]         1.220       -1.014
+pulse_timeout[5]         ufo|clk       FD1S3IX     Q       pulse_timeout[5]         1.220       -1.014
+pulse_timeout[6]         ufo|clk       FD1S3IX     Q       pulse_timeout[6]         1.220       -1.014
+pulse_timeout[8]         ufo|clk       FD1S3IX     Q       pulse_timeout[8]         1.220       -1.014
+pulse_timeout_7_rep1     ufo|clk       FD1S3IX     Q       pulse_timeout_7_rep1     1.220       -1.014
+======================================================================================================
+
+
+<a name=endingSlack15></a>Ending Points with Worst Slack</a>
+******************************
+
+                     Starting                                                 Required           
+Instance             Reference     Type        Pin     Net                    Time         Slack 
+                     Clock                                                                       
+-------------------------------------------------------------------------------------------------
+led_arm[0]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+led_arm[1]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+led_arm[2]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+led_arm[3]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+led_arm[4]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+led_arm[5]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+led_arm[6]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+led_arm[7]           ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+timed_out            ufo|clk       FD1P3AX     SP      led_arm_0_sqmuxa_i     5.546        -1.062
+pulse_timeout[0]     ufo|clk       FD1S3IX     CD      un1_armed_1_iso        5.215        0.461 
+=================================================================================================
+
+
+
+<a name=worstPaths16></a>Worst Path Information</a>
+<a href="/home/tony/Lattice/UFO/impl1/impl1.srr:srsf/home/tony/Lattice/UFO/impl1/impl1.srs:fp:30607:32389:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      6.018
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.546
+
+    - Propagation time:                      6.608
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.062
+
+    Number of logic level(s):                5
+    Starting point:                          pulse_timeout[1] / Q
+    Ending point:                            led_arm[0] / SP
+    The start point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+    The end   point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+
+Instance / Net                                   Pin      Pin               Arrival     No. of    
+Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------
+pulse_timeout[1]                    FD1S3AX      Q        Out     1.268     1.268 r     -         
+pulse_timeout[1]                    Net          -        -       -         -           17        
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     B        In      0.000     1.268 r     -         
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     Z        Out     1.017     2.285 f     -         
+g0_5_8                              Net          -        -       -         -           1         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     C        In      0.000     2.285 f     -         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     Z        Out     1.017     3.301 r     -         
+pulse_timeout_3_rep1_RNI0FPO2       Net          -        -       -         -           1         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     C        In      0.000     3.301 r     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     Z        Out     1.017     4.318 f     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     Net          -        -       -         -           1         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     A        In      0.000     4.318 f     -         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     Z        Out     1.017     5.335 r     -         
+G_36_1                              Net          -        -       -         -           1         
+armed_RNI529EM                      ORCALUT4     A        In      0.000     5.335 r     -         
+armed_RNI529EM                      ORCALUT4     Z        Out     1.273     6.608 f     -         
+led_arm_0_sqmuxa_i                  Net          -        -       -         -           9         
+led_arm[0]                          FD1P3AX      SP       In      0.000     6.608 f     -         
+==================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      6.018
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.546
+
+    - Propagation time:                      6.608
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.062
+
+    Number of logic level(s):                5
+    Starting point:                          pulse_timeout[2] / Q
+    Ending point:                            led_arm[0] / SP
+    The start point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+    The end   point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+
+Instance / Net                                   Pin      Pin               Arrival     No. of    
+Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------
+pulse_timeout[2]                    FD1S3AX      Q        Out     1.268     1.268 r     -         
+pulse_timeout[2]                    Net          -        -       -         -           17        
+pulse_timeout_RNI6MI51[5]           ORCALUT4     A        In      0.000     1.268 r     -         
+pulse_timeout_RNI6MI51[5]           ORCALUT4     Z        Out     1.017     2.285 r     -         
+pulse_timeout_RNI6MI51[5]           Net          -        -       -         -           1         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     B        In      0.000     2.285 r     -         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     Z        Out     1.017     3.301 f     -         
+pulse_timeout_3_rep1_RNI0FPO2       Net          -        -       -         -           1         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     C        In      0.000     3.301 f     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     Z        Out     1.017     4.318 r     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     Net          -        -       -         -           1         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     A        In      0.000     4.318 r     -         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     Z        Out     1.017     5.335 f     -         
+G_36_1                              Net          -        -       -         -           1         
+armed_RNI529EM                      ORCALUT4     A        In      0.000     5.335 f     -         
+armed_RNI529EM                      ORCALUT4     Z        Out     1.273     6.608 r     -         
+led_arm_0_sqmuxa_i                  Net          -        -       -         -           9         
+led_arm[0]                          FD1P3AX      SP       In      0.000     6.608 r     -         
+==================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      6.018
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.546
+
+    - Propagation time:                      6.608
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.062
+
+    Number of logic level(s):                5
+    Starting point:                          pulse_timeout[1] / Q
+    Ending point:                            led_arm[7] / SP
+    The start point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+    The end   point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+
+Instance / Net                                   Pin      Pin               Arrival     No. of    
+Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------
+pulse_timeout[1]                    FD1S3AX      Q        Out     1.268     1.268 r     -         
+pulse_timeout[1]                    Net          -        -       -         -           17        
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     B        In      0.000     1.268 r     -         
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     Z        Out     1.017     2.285 f     -         
+g0_5_8                              Net          -        -       -         -           1         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     C        In      0.000     2.285 f     -         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     Z        Out     1.017     3.301 r     -         
+pulse_timeout_3_rep1_RNI0FPO2       Net          -        -       -         -           1         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     C        In      0.000     3.301 r     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     Z        Out     1.017     4.318 f     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     Net          -        -       -         -           1         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     A        In      0.000     4.318 f     -         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     Z        Out     1.017     5.335 r     -         
+G_36_1                              Net          -        -       -         -           1         
+armed_RNI529EM                      ORCALUT4     A        In      0.000     5.335 r     -         
+armed_RNI529EM                      ORCALUT4     Z        Out     1.273     6.608 f     -         
+led_arm_0_sqmuxa_i                  Net          -        -       -         -           9         
+led_arm[7]                          FD1P3AX      SP       In      0.000     6.608 f     -         
+==================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      6.018
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.546
+
+    - Propagation time:                      6.608
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.062
+
+    Number of logic level(s):                5
+    Starting point:                          pulse_timeout[1] / Q
+    Ending point:                            led_arm[6] / SP
+    The start point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+    The end   point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+
+Instance / Net                                   Pin      Pin               Arrival     No. of    
+Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------
+pulse_timeout[1]                    FD1S3AX      Q        Out     1.268     1.268 r     -         
+pulse_timeout[1]                    Net          -        -       -         -           17        
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     B        In      0.000     1.268 r     -         
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     Z        Out     1.017     2.285 f     -         
+g0_5_8                              Net          -        -       -         -           1         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     C        In      0.000     2.285 f     -         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     Z        Out     1.017     3.301 r     -         
+pulse_timeout_3_rep1_RNI0FPO2       Net          -        -       -         -           1         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     C        In      0.000     3.301 r     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     Z        Out     1.017     4.318 f     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     Net          -        -       -         -           1         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     A        In      0.000     4.318 f     -         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     Z        Out     1.017     5.335 r     -         
+G_36_1                              Net          -        -       -         -           1         
+armed_RNI529EM                      ORCALUT4     A        In      0.000     5.335 r     -         
+armed_RNI529EM                      ORCALUT4     Z        Out     1.273     6.608 f     -         
+led_arm_0_sqmuxa_i                  Net          -        -       -         -           9         
+led_arm[6]                          FD1P3AX      SP       In      0.000     6.608 f     -         
+==================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      6.018
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.546
+
+    - Propagation time:                      6.608
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.062
+
+    Number of logic level(s):                5
+    Starting point:                          pulse_timeout[1] / Q
+    Ending point:                            led_arm[5] / SP
+    The start point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+    The end   point is clocked by            ufo|clk [rising] (rise=0.000 fall=3.009 period=6.018) on pin CK
+
+Instance / Net                                   Pin      Pin               Arrival     No. of    
+Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------
+pulse_timeout[1]                    FD1S3AX      Q        Out     1.268     1.268 r     -         
+pulse_timeout[1]                    Net          -        -       -         -           17        
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     B        In      0.000     1.268 r     -         
+pulse_timeout_4_rep1_RNI56OU        ORCALUT4     Z        Out     1.017     2.285 f     -         
+g0_5_8                              Net          -        -       -         -           1         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     C        In      0.000     2.285 f     -         
+pulse_timeout_3_rep1_RNI0FPO2       ORCALUT4     Z        Out     1.017     3.301 r     -         
+pulse_timeout_3_rep1_RNI0FPO2       Net          -        -       -         -           1         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     C        In      0.000     3.301 r     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     ORCALUT4     Z        Out     1.017     4.318 f     -         
+op_eq\.un49_armed_14_1_RNIJ0GL4     Net          -        -       -         -           1         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     A        In      0.000     4.318 f     -         
+op_eq\.un14_armed_12_RNI77JJ8       ORCALUT4     Z        Out     1.017     5.335 r     -         
+G_36_1                              Net          -        -       -         -           1         
+armed_RNI529EM                      ORCALUT4     A        In      0.000     5.335 r     -         
+armed_RNI529EM                      ORCALUT4     Z        Out     1.273     6.608 f     -         
+led_arm_0_sqmuxa_i                  Net          -        -       -         -           9         
+led_arm[5]                          FD1P3AX      SP       In      0.000     6.608 f     -         
+==================================================================================================
+
+
+
+
+====================================
+<a name=clockReport17></a>Detailed Report for Clock: ufo|trigger</a>
+====================================
+
+
+
+<a name=startingSlack18></a>Starting Points with Worst Slack</a>
+********************************
+
+               Starting                                           Arrival            
+Instance       Reference       Type        Pin     Net            Time        Slack  
+               Clock                                                                 
+-------------------------------------------------------------------------------------
+arm_toggle     ufo|trigger     FD1S3AX     Q       arm_toggle     1.108       998.787
+=====================================================================================
+
+
+<a name=endingSlack19></a>Ending Points with Worst Slack</a>
+******************************
+
+                  Starting                                          Required            
+Instance          Reference       Type       Pin     Net            Time         Slack  
+                  Clock                                                                 
+----------------------------------------------------------------------------------------
+arm_toggle_s1     ufo|trigger     FD1S1A     D       arm_toggle     999.894      998.787
+========================================================================================
+
+
+
+<a name=worstPaths20></a>Worst Path Information</a>
+<a href="/home/tony/Lattice/UFO/impl1/impl1.srr:srsf/home/tony/Lattice/UFO/impl1/impl1.srs:fp:46859:47102:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         999.894
+
+    - Propagation time:                      1.108
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 998.787
+
+    Number of logic level(s):                0
+    Starting point:                          arm_toggle / Q
+    Ending point:                            arm_toggle_s1 / D
+    The start point is clocked by            ufo|trigger [rising] (rise=0.000 fall=500.000 period=1000.000) on pin CK
+    The end   point is clocked by            System [rising] on pin CK
+
+Instance / Net                 Pin      Pin               Arrival     No. of    
+Name               Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------
+arm_toggle         FD1S3AX     Q        Out     1.108     1.108 r     -         
+arm_toggle         Net         -        -       -         -           3         
+arm_toggle_s1      FD1S1A      D        In      0.000     1.108 r     -         
+================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 263MB peak: 263MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 263MB peak: 263MB)
+
+---------------------------------------
+<a name=resourceUsage21></a>Resource Usage Report</a>
+Part: lcmxo3d_4300zc-2
+
+Register bits: 42 of 6900 (1%)
+Latch bits:      2
+PIC Latch:       0
+I/O cells:       10
+
+
+Details:
+CCU2D:          9
+FD1P3AX:        9
+FD1S1A:         1
+FD1S1D:         1
+FD1S3AX:        4
+FD1S3IX:        29
+GSR:            1
+IB:             2
+INV:            4
+OB:             8
+ORCALUT4:       93
+PUR:            1
+VHI:            1
+VLO:            1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 263MB peak: 263MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Jan 18 15:29:04 2022
+
+###########################################################]
+
+</pre></samp></body></html>

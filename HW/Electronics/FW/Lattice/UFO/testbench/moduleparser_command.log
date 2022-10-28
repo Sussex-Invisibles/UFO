@@ -1,0 +1,1 @@
+/usr/local/diamond/3.12/bin/lin64/moduleparser -PROJ testbench -pf /usr/local/diamond/3.12/cae_library/synthesis/vhdl/machxo3d.vhd -lib machxo3d -pf /usr/local/diamond/3.12/cae_library/synthesis/verilog/machxo3d.v -pkg /usr/local/diamond/3.12/cae_library/vhdl_packages/vdbs -lst /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/testbench/source_files.lst

@@ -1,0 +1,5 @@
+#Start recording tcl command: 3/22/2022 11:00:32
+#Project Location: /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO; Project name: UFO
+prj_project open "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/UFO.ldf"
+prj_project close
+#Stop recording: 3/22/2022 11:00:47

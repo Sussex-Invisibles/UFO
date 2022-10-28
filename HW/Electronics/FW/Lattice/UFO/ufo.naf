@@ -1,0 +1,10 @@
+clk  i
+trigger  i
+led0  o
+led1  o
+led2  o
+led3  o
+led4  o
+led5  o
+led6  o
+led7  o

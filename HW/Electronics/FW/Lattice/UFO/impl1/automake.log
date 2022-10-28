@@ -1,0 +1,2655 @@
+
+map -a "MachXO3D" -p LCMXO3D-4300ZC -t QFN72 -s 2 -oc Commercial   "UFO_impl1.ngd" -o "UFO_impl1_map.ncd" -pr "UFO_impl1.prf" -mp "UFO_impl1.mrp" -lpf "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/impl1/UFO_impl1.lpf" -lpf "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/UFO.lpf"  -c 0     -retime -tdm -split_node -td_pack   
+map:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: UFO_impl1.ngd
+   Picdevice="LCMXO3D-4300ZC"
+
+   Pictype="QFN72"
+
+   Picspeed=2
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO3D-4300ZCQFN72, Performance used: 2.
+
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/UFO.lpf(26): Semantic error in &quot;IOBUF PORT &quot;trigger_n&quot; IO_TYPE=LVCMOS33 ;&quot;: " arg1="trigger_n" arg2="/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/UFO.lpf" arg3="26"  />
+Loading device for application map from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+
+Running general design DRC...
+
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="trigger_n"  />
+Removing unused logic...
+
+Optimizing...
+
+    <postMsg mid="51011053" type="Warning" dynamic="1" navigation="0" arg0="ufo_module/armed_I_0_set"  />
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="trigger_n"  />
+
+No retiming is necessary for the given constraints
+
+
+
+
+
+Design Summary:
+   Number of registers:     29 out of  4497 (1%)
+      PFU registers:           29 out of  4320 (1%)
+      PIO registers:            0 out of   177 (0%)
+   Number of SLICEs:        42 out of  2160 (2%)
+      SLICEs as Logic/ROM:     42 out of  2160 (2%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:          9 out of  2160 (0%)
+   Number of LUT4s:         84 out of  4320 (2%)
+      Number used as logic LUTs:         66
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       18
+      Number used as shift registers:     0
+   Number of PIO sites used: 10 + 4(JTAG) out of 59 (24%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Security used :   No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  4
+     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
+     Net trigger_p_c: 1 loads, 1 rising, 0 falling (Driver: PIO trigger_p )
+     Net ufo_module/toggle_s1_N_67: 1 loads, 1 rising, 0 falling (Driver: ufo_module/rst_I_0_2_lut_3_lut_4_lut )
+     Net ufo_module/armed_N_71: 1 loads, 1 rising, 0 falling (Driver: ufo_module/toggle_s1_N_68_I_0_2_lut_2_lut_3_lut_4_lut )
+   Number of Clock Enables:  3
+     Net clk_c_enable_19: 4 loads, 4 LSLICEs
+     Net ufo_module/clk_c_enable_25: 9 loads, 9 LSLICEs
+     Net ufo_module/clk_c_enable_20: 1 loads, 1 LSLICEs
+   Number of LSRs:  2
+     Net n1383: 14 loads, 14 LSLICEs
+     Net ufo_module/armed_N_71: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net ufo_module/pulse_timeout_1: 23 loads
+     Net ufo_module/pulse_timeout_7: 21 loads
+     Net n1383: 15 loads
+     Net ufo_module/pulse_timeout_2: 15 loads
+     Net ufo_module/pulse_timeout_3: 14 loads
+     Net ufo_module/pulse_timeout_4: 14 loads
+     Net ufo_module/pulse_timeout_6: 13 loads
+     Net ufo_module/n332: 12 loads
+     Net ufo_module/n333: 12 loads
+     Net ufo_module/pulse_timeout_5: 10 loads
+ 
+
+   Number of warnings:  4
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 212 MB
+
+Dumping design to file UFO_impl1_map.ncd.
+
+ncd2vdb "UFO_impl1_map.ncd" ".vdbs/UFO_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+
+trce -f "UFO_impl1.mt" -o "UFO_impl1.tw1" "UFO_impl1_map.ncd" "UFO_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file UFO_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Loading device for application trce from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Thu Sep 15 12:46:45 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UFO_impl1.tw1 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml UFO_impl1_map.ncd UFO_impl1.prf 
+Design file:     UFO_impl1_map.ncd
+Preference file: UFO_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,2
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+2 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 675 paths, 9 nets, and 293 connections (89.06% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Thu Sep 15 12:46:46 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UFO_impl1.tw1 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml UFO_impl1_map.ncd UFO_impl1.prf 
+Design file:     UFO_impl1_map.ncd
+Preference file: UFO_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+2 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 675 paths, 9 nets, and 293 connections (89.06% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 147 MB
+
+
+ldbanno "UFO_impl1_map.ncd" -n VHDL -o "UFO_impl1_mapvho.vho" -w -neg
+ldbanno: version Diamond (64-bit) 3.12.1.454
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the UFO_impl1_map design file.
+
+
+Loading design for application ldbanno from file UFO_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Loading device for application ldbanno from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Converting design UFO_impl1_map.ncd into .ldb format.
+Writing VHDL netlist to file UFO_impl1_mapvho.vho
+Writing SDF timing to file UFO_impl1_mapvho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 127 MB
+
+mpartrce -p "UFO_impl1.p2t" -f "UFO_impl1.p3t" -tf "UFO_impl1.pt" "UFO_impl1_map.ncd" "UFO_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:46:46 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 1 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1 UFO_impl1_map.ncd UFO_impl1.dir/5_1.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 50
+
+Loading design for application par from file UFO_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Loading device for application par from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 120396.
+Finished Placer Phase 1.  REAL time: 3 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  81286
+Finished Placer Phase 2.  REAL time: 3 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C17C", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_1.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:46:49 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:46:49 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:46:49 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 239(72.64%) untouched conns; 1306062 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.532ns/-1306.062ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1300109 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.728ns/-1300.109ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1300109 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.728ns/-1300.109ns; real time: 3 secs 
+Level 4, iteration 1
+6(0.00%) conflicts; 0(0.00%) untouched conn; 1295682 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.492ns/-1295.683ns; real time: 4 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Thu Sep 15 12:46:50 UTC 2022
+Level 4, iteration 1
+6(0.00%) conflicts; 0(0.00%) untouched conn; 1295682 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.492ns/-1295.683ns; real time: 4 secs 
+Level 4, iteration 2
+6(0.00%) conflicts; 0(0.00%) untouched conn; 1295682 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.492ns/-1295.683ns; real time: 4 secs 
+Level 4, iteration 3
+5(0.00%) conflicts; 0(0.00%) untouched conn; 1295682 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.492ns/-1295.683ns; real time: 4 secs 
+Level 4, iteration 4
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1295682 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.492ns/-1295.683ns; real time: 4 secs 
+Level 4, iteration 5
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1295682 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.492ns/-1295.683ns; real time: 4 secs 
+Level 4, iteration 6
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1295682 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.492ns/-1295.683ns; real time: 4 secs 
+Level 4, iteration 7
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+Level 4, iteration 8
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+Level 4, iteration 9
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+Level 4, iteration 10
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+Level 4, iteration 11
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+Level 4, iteration 14
+0(0.00%) conflict; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+
+Start NBR section for performance tuning (iteration 1) at Thu Sep 15 12:46:50 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+
+Start NBR section for re-routing at Thu Sep 15 12:46:50 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1337683 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.592ns/-1337.683ns; real time: 4 secs 
+
+Start NBR section for post-routing at Thu Sep 15 12:46:50 UTC 2022
+2 potential circuit loops found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 20 (6.08%)
+  Estimated worst slack<setup> : -68.944ns
+  Timing score<setup> : 843688
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+Total CPU time 3 secs 
+Total REAL time: 4 secs 
+Completely routed.
+End of route.  329 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 1
+
+Timing score: 843688 
+
+Dumping design to file UFO_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -68.944
+PAR_SUMMARY::Timing score<setup/<ns>> = 843.688
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.888
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.888
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 4 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:46:50 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 2 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-68.944 UFO_impl1_map.ncd UFO_impl1.dir/5_2.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-2.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 96630.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  96714
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C17A", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_2.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:46:53 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:46:53 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:46:53 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 243(73.86%) untouched conns; 1297881 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.184ns/-1297.882ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 233(70.82%) untouched conns; 1291929 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.380ns/-1291.929ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 233(70.82%) untouched conns; 1291929 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.380ns/-1291.929ns; real time: 3 secs 
+Level 4, iteration 1
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Thu Sep 15 12:46:53 UTC 2022
+Level 4, iteration 1
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 2
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 3
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 4
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 6
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 7
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 9
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 10
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 11
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 14
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 15
+1(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+Level 4, iteration 16
+0(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+
+Start NBR section for performance tuning (iteration 1) at Thu Sep 15 12:46:53 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+
+Start NBR section for re-routing at Thu Sep 15 12:46:53 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1197332 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.608ns/-1197.333ns; real time: 3 secs 
+
+Start NBR section for post-routing at Thu Sep 15 12:46:53 UTC 2022
+2 potential circuit loops found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 20 (6.08%)
+  Estimated worst slack<setup> : -61.608ns
+  Timing score<setup> : 739480
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+Total CPU time 3 secs 
+Total REAL time: 3 secs 
+Completely routed.
+End of route.  329 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 1, hold timing errors: 1
+
+Timing score: 739480 
+
+Dumping design to file UFO_impl1.dir/5_2.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -61.608
+PAR_SUMMARY::Timing score<setup/<ns>> = 739.480
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -1.104
+PAR_SUMMARY::Timing score<hold /<ns>> = 1.104
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 3 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:46:53 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 3 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_3.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-3.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 147366.
+Finished Placer Phase 1.  REAL time: 3 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  146626
+Finished Placer Phase 2.  REAL time: 3 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C15D", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_3.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:46:56 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:46:56 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:46:57 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 239(72.64%) untouched conns; 1490130 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -75.904ns/-1490.130ns; real time: 4 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1484196 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -76.100ns/-1484.196ns; real time: 4 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1484196 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -76.100ns/-1484.196ns; real time: 4 secs 
+Level 4, iteration 1
+5(0.00%) conflicts; 0(0.00%) untouched conn; 1436591 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -73.712ns/-1436.592ns; real time: 4 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+*****************************************************************************
+WARNING: The worst setup slack (-73.712ns) after initial routing exceeds the 
+specified threshold -61.608 ns. This par run will be terminated.
+*****************************************************************************
+
+
+PAR_SUMMARY::Run status = Skipped
+PAR_SUMMARY::Number of unrouted conns = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 4 secs 
+
+par failed!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:46:57 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 4 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_4.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-4.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 186924.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  157161
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C17D", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_4.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:47:00 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:47:00 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:47:00 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 232(70.52%) untouched conns; 1329731 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.412ns/-1329.731ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 228(69.30%) untouched conns; 1327140 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.412ns/-1327.140ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 228(69.30%) untouched conns; 1327140 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.412ns/-1327.140ns; real time: 3 secs 
+Level 4, iteration 1
+7(0.00%) conflicts; 0(0.00%) untouched conn; 1309876 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.580ns/-1309.876ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+*****************************************************************************
+WARNING: The worst setup slack (-67.580ns) after initial routing exceeds the 
+specified threshold -61.608 ns. This par run will be terminated.
+*****************************************************************************
+
+
+PAR_SUMMARY::Run status = Skipped
+PAR_SUMMARY::Number of unrouted conns = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 3 secs 
+
+par failed!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:47:00 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 5 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_5.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-5.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 172286.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  104416
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C17D", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_5.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:47:03 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:47:03 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:47:03 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 234(71.12%) untouched conns; 1234146 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.060ns/-1234.146ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 226(68.69%) untouched conns; 1233692 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.060ns/-1233.692ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 226(68.69%) untouched conns; 1233692 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.060ns/-1233.692ns; real time: 3 secs 
+Level 4, iteration 1
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Thu Sep 15 12:47:03 UTC 2022
+Level 4, iteration 1
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 2
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 3
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 4
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 5
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 6
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 7
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 8
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 9
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 10
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 11
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 12
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1170571 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -60.904ns/-1170.572ns; real time: 3 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 0(0.00%) untouched conn; 1188892 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.820ns/-1188.892ns; real time: 3 secs 
+Level 4, iteration 14
+1(0.00%) conflict; 0(0.00%) untouched conn; 1188892 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.820ns/-1188.892ns; real time: 3 secs 
+Level 4, iteration 15
+1(0.00%) conflict; 0(0.00%) untouched conn; 1188892 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.820ns/-1188.892ns; real time: 3 secs 
+Level 4, iteration 16
+1(0.00%) conflict; 0(0.00%) untouched conn; 1188892 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.820ns/-1188.892ns; real time: 3 secs 
+Level 4, iteration 17
+1(0.00%) conflict; 0(0.00%) untouched conn; 1263131 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.532ns/-1263.132ns; real time: 3 secs 
+Level 4, iteration 18
+1(0.00%) conflict; 0(0.00%) untouched conn; 1263131 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.532ns/-1263.132ns; real time: 3 secs 
+Level 4, iteration 19
+1(0.00%) conflict; 0(0.00%) untouched conn; 1263131 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.532ns/-1263.132ns; real time: 3 secs 
+Level 4, iteration 20
+1(0.00%) conflict; 0(0.00%) untouched conn; 1263131 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -65.532ns/-1263.132ns; real time: 3 secs 
+Level 4, iteration 21
+0(0.00%) conflict; 0(0.00%) untouched conn; 1305132 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.632ns/-1305.132ns; real time: 3 secs 
+Level 4, iteration 22
+0(0.00%) conflict; 0(0.00%) untouched conn; 1305132 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.632ns/-1305.132ns; real time: 3 secs 
+
+Start NBR section for performance tuning (iteration 1) at Thu Sep 15 12:47:03 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1305132 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.632ns/-1305.132ns; real time: 3 secs 
+
+Start NBR section for re-routing at Thu Sep 15 12:47:03 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1305132 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.632ns/-1305.132ns; real time: 3 secs 
+
+Start NBR section for post-routing at Thu Sep 15 12:47:03 UTC 2022
+2 potential circuit loops found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 20 (6.08%)
+  Estimated worst slack<setup> : -67.632ns
+  Timing score<setup> : 785044
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+Total CPU time 3 secs 
+Total REAL time: 3 secs 
+Completely routed.
+End of route.  329 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 1, hold timing errors: 1
+
+Timing score: 785044 
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -67.632
+PAR_SUMMARY::Timing score<setup/<ns>> = 785.044
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -1.079
+PAR_SUMMARY::Timing score<hold /<ns>> = 1.079
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 3 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:47:03 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 6 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_6.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-6.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 91846.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  79718
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R20C9B", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_6.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:47:06 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:47:06 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:47:06 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 234(71.12%) untouched conns; 1190451 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.700ns/-1190.451ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 230(69.91%) untouched conns; 1187860 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.700ns/-1187.860ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 230(69.91%) untouched conns; 1187860 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -61.700ns/-1187.860ns; real time: 3 secs 
+Level 4, iteration 1
+8(0.00%) conflicts; 0(0.00%) untouched conn; 1129316 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -58.812ns/-1129.316ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Thu Sep 15 12:47:06 UTC 2022
+Level 4, iteration 1
+9(0.00%) conflicts; 0(0.00%) untouched conn; 1129316 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -58.812ns/-1129.316ns; real time: 3 secs 
+Level 4, iteration 2
+8(0.00%) conflicts; 0(0.00%) untouched conn; 1129316 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -58.812ns/-1129.316ns; real time: 3 secs 
+Level 4, iteration 3
+8(0.00%) conflicts; 0(0.00%) untouched conn; 1129316 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -58.812ns/-1129.316ns; real time: 3 secs 
+Level 4, iteration 4
+6(0.00%) conflicts; 0(0.00%) untouched conn; 1129316 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -58.812ns/-1129.316ns; real time: 3 secs 
+Level 4, iteration 5
+6(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 6
+6(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 7
+4(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 8
+4(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 9
+4(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 10
+4(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 11
+4(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 12
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1139956 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.344ns/-1139.956ns; real time: 3 secs 
+Level 4, iteration 13
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1193396 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -62.016ns/-1193.396ns; real time: 3 secs 
+Level 4, iteration 14
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1193396 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -62.016ns/-1193.396ns; real time: 3 secs 
+Level 4, iteration 15
+4(0.00%) conflicts; 0(0.00%) untouched conn; 1235396 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.116ns/-1235.396ns; real time: 3 secs 
+Level 4, iteration 16
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1235396 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.116ns/-1235.396ns; real time: 3 secs 
+Level 4, iteration 17
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1241395 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.416ns/-1241.396ns; real time: 3 secs 
+Level 4, iteration 18
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1241395 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.416ns/-1241.396ns; real time: 4 secs 
+Level 4, iteration 19
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1300836 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.388ns/-1300.836ns; real time: 4 secs 
+Level 4, iteration 20
+1(0.00%) conflict; 0(0.00%) untouched conn; 1300836 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.388ns/-1300.836ns; real time: 4 secs 
+Level 4, iteration 21
+0(0.00%) conflict; 0(0.00%) untouched conn; 1342836 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.488ns/-1342.836ns; real time: 4 secs 
+Level 4, iteration 22
+0(0.00%) conflict; 0(0.00%) untouched conn; 1342836 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.488ns/-1342.836ns; real time: 4 secs 
+
+Start NBR section for performance tuning (iteration 1) at Thu Sep 15 12:47:07 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1342836 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.488ns/-1342.836ns; real time: 4 secs 
+
+Start NBR section for re-routing at Thu Sep 15 12:47:07 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1342836 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.488ns/-1342.836ns; real time: 4 secs 
+
+Start NBR section for post-routing at Thu Sep 15 12:47:07 UTC 2022
+2 potential circuit loops found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 20 (6.08%)
+  Estimated worst slack<setup> : -69.488ns
+  Timing score<setup> : 808788
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+Total CPU time 3 secs 
+Total REAL time: 4 secs 
+Completely routed.
+End of route.  329 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 1
+
+Timing score: 808788 
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -69.488
+PAR_SUMMARY::Timing score<setup/<ns>> = 808.788
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.885
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.885
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 4 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:47:07 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 7 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_7.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-7.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 121094.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  121272
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C17C", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_7.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 2 secs 
+
+Start NBR router at Thu Sep 15 12:47:09 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:47:09 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:47:10 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 239(72.64%) untouched conns; 1278149 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.780ns/-1278.150ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1270967 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.976ns/-1270.967ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1270967 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -64.976ns/-1270.967ns; real time: 3 secs 
+Level 4, iteration 1
+11(0.00%) conflicts; 0(0.00%) untouched conn; 1229063 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -62.920ns/-1229.063ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+*****************************************************************************
+WARNING: The worst setup slack (-62.920ns) after initial routing exceeds the 
+specified threshold -61.608 ns. This par run will be terminated.
+*****************************************************************************
+
+
+PAR_SUMMARY::Run status = Skipped
+PAR_SUMMARY::Number of unrouted conns = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 3 secs 
+
+par failed!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:47:10 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 8 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_8.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-8.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 93362.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  93358
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C15B", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 1 secs 
+
+Dumping design to file UFO_impl1.dir/5_8.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 2 secs 
+
+Start NBR router at Thu Sep 15 12:47:12 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:47:12 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:47:13 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 237(72.04%) untouched conns; 1117074 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -57.232ns/-1117.074ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1116620 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -57.232ns/-1116.620ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1116620 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -57.232ns/-1116.620ns; real time: 3 secs 
+Level 4, iteration 1
+4(0.00%) conflicts; 0(0.00%) untouched conn; 1167844 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.844ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Thu Sep 15 12:47:13 UTC 2022
+Level 4, iteration 1
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 2
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 3
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 4
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 5
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 6
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 7
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 8
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 9
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 10
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 11
+2(0.00%) conflicts; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+Level 4, iteration 12
+0(0.00%) conflict; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+
+Start NBR section for performance tuning (iteration 1) at Thu Sep 15 12:47:13 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+
+Start NBR section for re-routing at Thu Sep 15 12:47:13 UTC 2022
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 1167845 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -59.748ns/-1167.845ns; real time: 3 secs 
+
+Start NBR section for post-routing at Thu Sep 15 12:47:13 UTC 2022
+2 potential circuit loops found in timing analysis.
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 20 (6.08%)
+  Estimated worst slack<setup> : -63.360ns
+  Timing score<setup> : 789300
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+Total CPU time 3 secs 
+Total REAL time: 3 secs 
+Completely routed.
+End of route.  329 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 1, hold timing errors: 1
+
+Timing score: 789300 
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -63.360
+PAR_SUMMARY::Timing score<setup/<ns>> = 789.300
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -1.079
+PAR_SUMMARY::Timing score<hold /<ns>> = 1.079
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 3 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:47:13 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 9 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_9.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-9.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+..................
+Placer score = 147449.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  126727
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R12C17B", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_9.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:47:16 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:47:16 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:47:16 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 235(71.43%) untouched conns; 1286878 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.800ns/-1286.878ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 227(69.00%) untouched conns; 1286424 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.800ns/-1286.424ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 227(69.00%) untouched conns; 1286424 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.800ns/-1286.424ns; real time: 3 secs 
+Level 4, iteration 1
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1275880 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -66.304ns/-1275.880ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+*****************************************************************************
+WARNING: The worst setup slack (-66.304ns) after initial routing exceeds the 
+specified threshold -61.608 ns. This par run will be terminated.
+*****************************************************************************
+
+
+PAR_SUMMARY::Run status = Skipped
+PAR_SUMMARY::Number of unrouted conns = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 3 secs 
+
+par failed!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Lattice Place and Route Report for Design "UFO_impl1_map.ncd"
+Thu Sep 15 12:47:16 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 50 -t 10 -c 0 -e 10 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=ON:parASE=1:aseRouteInitSetupSlackThreshold=-61.608 UFO_impl1_map.ncd UFO_impl1.dir/5_10.ncd UFO_impl1.prf
+Preference file: UFO_impl1.prf.
+Placement level-cost: 5-10.
+Routing Iterations: 50
+
+Loading design for application par from file /tmp/neo_wpAljW.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Device utilization summary:
+
+   PIO (prelim)   10+4(JTAG)/280     5% used
+                  10+4(JTAG)/59      24% bonded
+
+   SLICE             42/2160          1% used
+
+   GSR                1/1           100% used
+
+
+2 potential circuit loops found in timing analysis.
+Number of Signals: 115
+Number of Connections: 329
+    <postMsg mid="61061045" type="Warning" dynamic="0" navigation="0"  />
+
+Pin Constraint Summary:
+   10 out of 10 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    clk_c (driver: clk, clk load #: 14)
+
+
+The following 1 signal is selected to use the secondary clock routing resources:
+    n1383 (driver: ufo_module/SLICE_40, clk load #: 0, sr load #: 14, ce load #: 0)
+
+Signal n1382 is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+....................
+Placer score = 73451.
+Finished Placer Phase 1.  REAL time: 2 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  73541
+Finished Placer Phase 2.  REAL time: 2 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "23 (PB13A)", clk load = 14
+  SECONDARY "n1383" from F0 on comp "ufo_module/SLICE_40" on site "R20C10B", clk load = 0, ce load = 0, sr load = 14
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 1 out of 8 (12%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   10 + 4(JTAG) out of 280 (5.0%) PIO sites used.
+   10 + 4(JTAG) out of 59 (23.7%) bonded PIO sites used.
+   Number of PIO comps: 10; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+-----------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref |
++----------+---------------+------------+-----------+
+| 0        | 0 / 20 (  0%) | -          | -         |
+| 1        | 1 / 13 (  7%) | 3.3V       | -         |
+| 2        | 1 / 17 (  5%) | 3.3V       | -         |
+| 3        | 8 / 9 ( 88%)  | 3.3V       | -         |
++----------+---------------+------------+-----------+
+
+Total placer CPU time: 2 secs 
+
+Dumping design to file UFO_impl1.dir/5_10.ncd.
+
+2 potential circuit loops found in timing analysis.
+0 connections routed; 329 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=trigger_p_c loads=10 clock_loads=1&#xA;   Signal=ufo_module/toggle_s1_N_67 loads=1 clock_loads=1&#xA;   Signal=ufo_module/armed_N_71 loads=2 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 3 secs 
+
+Start NBR router at Thu Sep 15 12:47:19 UTC 2022
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+2 potential circuit loops found in timing analysis.
+Start NBR special constraint process at Thu Sep 15 12:47:19 UTC 2022
+  -- Pref: MAXSKEW PORT "led0" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led1" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led2" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led3" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led4" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led5" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led6" 0.100000 ns ;
+  -- Pref: MAXSKEW PORT "led7" 0.100000 ns ;
+
+Start NBR section for initial routing at Thu Sep 15 12:47:19 UTC 2022
+Level 1, iteration 1
+0(0.00%) conflict; 239(72.64%) untouched conns; 1418525 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -73.176ns/-1418.526ns; real time: 3 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1412591 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -73.372ns/-1412.592ns; real time: 3 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 229(69.60%) untouched conns; 1412591 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -73.372ns/-1412.592ns; real time: 3 secs 
+Level 4, iteration 1
+7(0.00%) conflicts; 0(0.00%) untouched conn; 1361361 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -70.780ns/-1361.362ns; real time: 3 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+*****************************************************************************
+WARNING: The worst setup slack (-70.780ns) after initial routing exceeds the 
+specified threshold -61.608 ns. This par run will be terminated.
+*****************************************************************************
+
+
+PAR_SUMMARY::Run status = Skipped
+PAR_SUMMARY::Number of unrouted conns = <n/a>
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 3 secs 
+Total REAL time to completion: 3 secs 
+
+par failed!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+    <postMsg mid="60001138" type="Info"    dynamic="3" navigation="0" arg0="Iterations 5_3, 5_4, 5_7, 5_9, and 5_10" arg1="were" arg2="they"  />
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "UFO_impl1.pt" -o "UFO_impl1.twr" "UFO_impl1.ncd" "UFO_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file UFO_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Loading device for application trce from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Thu Sep 15 12:47:22 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 2 -sphld m -o UFO_impl1.twr -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml UFO_impl1.ncd UFO_impl1.prf 
+Design file:     UFO_impl1.ncd
+Preference file: UFO_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,2
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+2 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 14  Score: 739480
+Cumulative negative slack: 739480
+
+Constraints cover 675 paths, 9 nets, and 293 connections (89.06% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Thu Sep 15 12:47:22 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 2 -sphld m -o UFO_impl1.twr -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml UFO_impl1.ncd UFO_impl1.prf 
+Design file:     UFO_impl1.ncd
+Preference file: UFO_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+2 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 1  Score: 1104
+Cumulative negative slack: 1104
+
+Constraints cover 675 paths, 9 nets, and 293 connections (89.06% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 14 (setup), 1 (hold)
+Score: 739480 (setup), 1104 (hold)
+Cumulative negative slack: 740584 (739480+1104)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 147 MB
+
+
+iotiming  "UFO_impl1.ncd" "UFO_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file UFO_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Loading device for application iotiming from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+2 potential circuit loops found in timing analysis.
+Running Performance Grade: 2
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+2 potential circuit loops found in timing analysis.
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file UFO_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 3
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+2 potential circuit loops found in timing analysis.
+Running Performance Grade: 3
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+2 potential circuit loops found in timing analysis.
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file UFO_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: M
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+2 potential circuit loops found in timing analysis.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+2 potential circuit loops found in timing analysis.
+Computing Min Clock to Output Delay ...
+Done.

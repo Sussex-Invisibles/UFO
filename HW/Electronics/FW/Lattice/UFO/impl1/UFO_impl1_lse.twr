@@ -1,0 +1,293 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue Jan 25 15:57:06 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     top
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk4 [get_nets \ufo_module/led5_c_derived_1]
+            1 item scored, 1 timing error detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.852ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S1A     CK             \ufo_module/led1_I_0_123  (from \ufo_module/led5_c_derived_1 +)
+   Destination:    FD1S1A     D              \ufo_module/led1_I_0_123  (to \ufo_module/led5_c_derived_1 +)
+
+   Delay:                   6.576ns  (24.5% logic, 75.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      6.576ns data_path \ufo_module/led1_I_0_123 to \ufo_module/led1_I_0_123 violates
+      5.000ns delay constraint less
+      0.276ns L_S requirement (totaling 4.724ns) by 1.852ns
+
+ Path Details: \ufo_module/led1_I_0_123 to \ufo_module/led1_I_0_123
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              \ufo_module/led1_I_0_123 (from \ufo_module/led5_c_derived_1)
+Route         5   e 3.025                                  led1_c
+LUT4        ---     0.848              A to Z              \ufo_module/led1_I_0_1_lut
+Route         1   e 1.940                                  \ufo_module/led1_N_50
+                  --------
+                    6.576  (24.5% logic, 75.5% route), 2 logic levels.
+
+Warning: 6.852 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets \ufo_module/led2_N_82]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets \ufo_module/toggle_s1_N_54]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets trigger_c]
+            1 item scored, 1 timing error detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.962ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \ufo_module/toggle_98  (from trigger_c +)
+   Destination:    FD1S3AX    D              \ufo_module/toggle_98  (to trigger_c +)
+
+   Delay:                   6.686ns  (24.1% logic, 75.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      6.686ns data_path \ufo_module/toggle_98 to \ufo_module/toggle_98 violates
+      5.000ns delay constraint less
+      0.276ns L_S requirement (totaling 4.724ns) by 1.962ns
+
+ Path Details: \ufo_module/toggle_98 to \ufo_module/toggle_98
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              \ufo_module/toggle_98 (from trigger_c)
+Route         6   e 3.135                                  led5_c
+LUT4        ---     0.848              A to Z              \ufo_module/led5_I_0_1_lut
+Route         1   e 1.940                                  \ufo_module/led5_N_85
+                  --------
+                    6.686  (24.1% logic, 75.9% route), 2 logic levels.
+
+Warning: 6.962 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            284 items scored, 284 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 14.915ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \ufo_module/pulse_timeout__i1  (from clk_c +)
+   Destination:    FD1P3IX    SP             \ufo_module/timed_out_101  (to clk_c +)
+
+   Delay:                  19.425ns  (29.9% logic, 70.1% route), 8 logic levels.
+
+ Constraint Details:
+
+     19.425ns data_path \ufo_module/pulse_timeout__i1 to \ufo_module/timed_out_101 violates
+      5.000ns delay constraint less
+      0.490ns LCE_S requirement (totaling 4.510ns) by 14.915ns
+
+ Path Details: \ufo_module/pulse_timeout__i1 to \ufo_module/timed_out_101
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              \ufo_module/pulse_timeout__i1 (from clk_c)
+Route        16   e 3.880                                  \ufo_module/pulse_timeout[1]
+LUT4        ---     0.848              B to Z              \ufo_module/n26_bdd_4_lut_4_lut_else_4_lut
+Route         1   e 0.020                                  \ufo_module/n890
+MUXL5       ---     0.401           BLUT to Z              \ufo_module/i733
+Route         1   e 1.940                                  \ufo_module/n892
+LUT4        ---     0.848              B to Z              \ufo_module/i2_3_lut_3_lut
+Route         1   e 0.020                                  \ufo_module/n670
+MUXL5       ---     0.401           BLUT to Z              \ufo_module/i89
+Route         1   e 1.940                                  \ufo_module/n84
+LUT4        ---     0.848              C to Z              \ufo_module/i1_4_lut
+Route         1   e 1.940                                  \ufo_module/n76
+LUT4        ---     0.848              C to Z              \ufo_module/i4_4_lut
+Route         1   e 1.940                                  \ufo_module/n11
+LUT4        ---     0.848              C to Z              \ufo_module/i707_4_lut
+Route         1   e 1.940                                  \ufo_module/clk_c_enable_13
+                  --------
+                   19.425  (29.9% logic, 70.1% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 14.915ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \ufo_module/pulse_timeout__i1  (from clk_c +)
+   Destination:    FD1P3IX    SP             \ufo_module/timed_out_101  (to clk_c +)
+
+   Delay:                  19.425ns  (29.9% logic, 70.1% route), 8 logic levels.
+
+ Constraint Details:
+
+     19.425ns data_path \ufo_module/pulse_timeout__i1 to \ufo_module/timed_out_101 violates
+      5.000ns delay constraint less
+      0.490ns LCE_S requirement (totaling 4.510ns) by 14.915ns
+
+ Path Details: \ufo_module/pulse_timeout__i1 to \ufo_module/timed_out_101
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              \ufo_module/pulse_timeout__i1 (from clk_c)
+Route        16   e 3.880                                  \ufo_module/pulse_timeout[1]
+LUT4        ---     0.848              B to Z              \ufo_module/n26_bdd_4_lut_4_lut_then_4_lut
+Route         1   e 0.020                                  \ufo_module/n891
+MUXL5       ---     0.401           ALUT to Z              \ufo_module/i733
+Route         1   e 1.940                                  \ufo_module/n892
+LUT4        ---     0.848              B to Z              \ufo_module/i2_3_lut_3_lut
+Route         1   e 0.020                                  \ufo_module/n670
+MUXL5       ---     0.401           BLUT to Z              \ufo_module/i89
+Route         1   e 1.940                                  \ufo_module/n84
+LUT4        ---     0.848              C to Z              \ufo_module/i1_4_lut
+Route         1   e 1.940                                  \ufo_module/n76
+LUT4        ---     0.848              C to Z              \ufo_module/i4_4_lut
+Route         1   e 1.940                                  \ufo_module/n11
+LUT4        ---     0.848              C to Z              \ufo_module/i707_4_lut
+Route         1   e 1.940                                  \ufo_module/clk_c_enable_13
+                  --------
+                   19.425  (29.9% logic, 70.1% route), 8 logic levels.
+
+
+Error:  The following path violates requirements by 14.899ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \ufo_module/pulse_timeout__i4  (from clk_c +)
+   Destination:    FD1P3IX    SP             \ufo_module/timed_out_101  (to clk_c +)
+
+   Delay:                  19.409ns  (29.9% logic, 70.1% route), 8 logic levels.
+
+ Constraint Details:
+
+     19.409ns data_path \ufo_module/pulse_timeout__i4 to \ufo_module/timed_out_101 violates
+      5.000ns delay constraint less
+      0.490ns LCE_S requirement (totaling 4.510ns) by 14.899ns
+
+ Path Details: \ufo_module/pulse_timeout__i4 to \ufo_module/timed_out_101
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              \ufo_module/pulse_timeout__i4 (from clk_c)
+Route        14   e 3.864                                  \ufo_module/pulse_timeout[4]
+LUT4        ---     0.848              D to Z              \ufo_module/n26_bdd_4_lut_4_lut_then_4_lut
+Route         1   e 0.020                                  \ufo_module/n891
+MUXL5       ---     0.401           ALUT to Z              \ufo_module/i733
+Route         1   e 1.940                                  \ufo_module/n892
+LUT4        ---     0.848              B to Z              \ufo_module/i2_3_lut_3_lut
+Route         1   e 0.020                                  \ufo_module/n670
+MUXL5       ---     0.401           BLUT to Z              \ufo_module/i89
+Route         1   e 1.940                                  \ufo_module/n84
+LUT4        ---     0.848              C to Z              \ufo_module/i1_4_lut
+Route         1   e 1.940                                  \ufo_module/n76
+LUT4        ---     0.848              C to Z              \ufo_module/i4_4_lut
+Route         1   e 1.940                                  \ufo_module/n11
+LUT4        ---     0.848              C to Z              \ufo_module/i707_4_lut
+Route         1   e 1.940                                  \ufo_module/clk_c_enable_13
+                  --------
+                   19.409  (29.9% logic, 70.1% route), 8 logic levels.
+
+Warning: 19.915 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk4 [get_nets                          |             |             |
+\ufo_module/led5_c_derived_1]           |     5.000 ns|     6.852 ns|     2 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets \ufo_module/led2_N_82]   |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets                          |             |             |
+\ufo_module/toggle_s1_N_54]             |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets trigger_c]               |     5.000 ns|     6.962 ns|     2 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|    19.915 ns|     8 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\ufo_module/n662                        |       1|      63|     22.03%
+                                        |        |        |
+\ufo_module/n663                        |       1|      63|     22.03%
+                                        |        |        |
+\ufo_module/clk_c_enable_13             |       1|      55|     19.23%
+                                        |        |        |
+\ufo_module/n661                        |       1|      55|     19.23%
+                                        |        |        |
+\ufo_module/n664                        |       1|      55|     19.23%
+                                        |        |        |
+\ufo_module/n11                         |       1|      49|     17.13%
+                                        |        |        |
+clk_c_enable_12                         |       1|      49|     17.13%
+                                        |        |        |
+n89                                     |       1|      40|     13.99%
+                                        |        |        |
+\ufo_module/n660                        |       1|      39|     13.64%
+                                        |        |        |
+\ufo_module/n665                        |       1|      39|     13.64%
+                                        |        |        |
+\ufo_module/n76                         |       1|      38|     13.29%
+                                        |        |        |
+led3_c                                  |       5|      36|     12.59%
+                                        |        |        |
+\ufo_module/pulse_timeout[1]            |      16|      30|     10.49%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 286  Score: 1791879
+
+Constraints cover  286 paths, 91 nets, and 248 connections (90.5% coverage)
+
+
+Peak memory: 225660928 bytes, TRCE: 8192 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

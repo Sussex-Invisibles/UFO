@@ -1,0 +1,313 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'ufo'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO3D -p LCMXO3D-4300ZC -t QFN72 -s 2 -oc Commercial
+     test_impl1.ngd -o test_impl1_map.ncd -pr test_impl1.prf -mp test_impl1.mrp
+     -lpf /home/tony/Lattice/impl1/test_impl1.lpf -lpf
+     /home/tony/Lattice/test.lpf -c 0 -gui -msgset
+     /home/tony/Lattice/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3D-4300ZCQFN72
+Target Performance:   2
+Mapper:  se5c00,  version:  Diamond (64-bit) 3.12.0.240.2
+Mapped on:  01/11/22  15:06:23
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:     30 out of  4497 (1%)
+      PFU registers:           30 out of  4320 (1%)
+      PIO registers:            0 out of   177 (0%)
+   Number of SLICEs:        38 out of  2160 (2%)
+      SLICEs as Logic/ROM:     38 out of  2160 (2%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:          9 out of  2160 (0%)
+   Number of LUT4s:         75 out of  4320 (2%)
+      Number used as logic LUTs:         57
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       18
+      Number used as shift registers:     0
+   Number of PIO sites used: 10 + 4(JTAG) out of 59 (24%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Security used :   No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
+
+     Net arm_toggle_s1_N_92: 1 loads, 1 rising, 0 falling (Driver:
+     arm_toggle_s1_I_0_144_4_lut_4_lut_4_lut )
+     Net trigger_c: 2 loads, 2 rising, 0 falling (Driver: PIO trigger )
+     Net armed_N_85: 1 loads, 1 rising, 0 falling (Driver: i2_3_lut_4_lut_adj_12
+     )
+   Number of Clock Enables:  1
+     Net clk_c_enable_9: 5 loads, 5 LSLICEs
+   Number of LSRs:  3
+     Net n755: 9 loads, 9 LSLICEs
+     Net n1769: 5 loads, 5 LSLICEs
+     Net armed_N_85: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net pulse_timeout_3: 13 loads
+     Net pulse_timeout_1: 12 loads
+     Net pulse_timeout_2: 11 loads
+     Net pulse_timeout_5: 11 loads
+     Net pulse_timeout_6: 11 loads
+     Net pulse_timeout_7: 11 loads
+     Net pulse_timeout_8: 11 loads
+     Net n152: 10 loads
+     Net pulse_timeout_4: 10 loads
+     Net toggle: 10 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: Register armed_I_0_145_set has a clock signal tied to GND.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| led0                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led1                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led2                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led3                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led4                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led5                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led6                | OUTPUT    | LVCMOS25  |            |
+
++---------------------+-----------+-----------+------------+
+| led7                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| trigger             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i1237 undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Signal n1816 undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal pulse_timeout_237_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal pulse_timeout_237_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal pulse_timeout_237_add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal pulse_timeout_237_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Block i1 was optimized away.
+Block m0_lut was optimized away.
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'armed_N_119'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'armed_N_119' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 29 
+
+     Type and instance name of component: 
+   Register : pulse_timeout_237__i0
+   Register : led_arm__i0
+   Register : arm_toggle_I_0_146
+   Register : arm_toggle_117
+
+   Register : armed_I_0_145_set
+   Register : timed_out_122
+   Register : toggle_118
+   Register : led_arm__i7
+   Register : led_arm__i6
+   Register : led_arm__i5
+   Register : led_arm__i4
+   Register : led_arm__i3
+   Register : led_arm__i2
+   Register : led_arm__i1
+   Register : pulse_timeout_237__i15
+   Register : pulse_timeout_237__i14
+   Register : pulse_timeout_237__i13
+   Register : pulse_timeout_237__i12
+   Register : pulse_timeout_237__i11
+   Register : pulse_timeout_237__i10
+   Register : pulse_timeout_237__i9
+   Register : pulse_timeout_237__i8
+   Register : pulse_timeout_237__i7
+   Register : pulse_timeout_237__i6
+   Register : pulse_timeout_237__i5
+   Register : pulse_timeout_237__i4
+   Register : pulse_timeout_237__i3
+   Register : pulse_timeout_237__i2
+   Register : pulse_timeout_237__i1
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 189 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

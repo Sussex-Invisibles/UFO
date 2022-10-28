@@ -1,0 +1,118 @@
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202003synp2, Build 184R, Built Oct 30 2020 10:19:07, @1018816
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys VHDL Compiler, Version comp202003synp2, Build 184R, Built Oct 30 2020 10:19:07, @1018816
+
+@N|Running in 64-bit mode
+@N:"/home/tony/Lattice/ufo.vhd":6:7:6:9|Top entity is set to ufo.
+VHDL syntax check successful!
+@N: CD630 :"/home/tony/Lattice/ufo.vhd":6:7:6:9|Synthesizing work.ufo.behv.
+@W: CD434 :"/home/tony/Lattice/ufo.vhd":103:12:103:14|Signal clk in the sensitivity list is not used in the process. Make sure all variables in the sensitivity list are referenced in the process.
+@W: CG296 :"/home/tony/Lattice/ufo.vhd":103:4:103:10|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/tony/Lattice/ufo.vhd":111:9:111:12|Referenced variable fire is not in sensitivity list.
+@W: CG290 :"/home/tony/Lattice/ufo.vhd":108:30:108:42|Referenced variable arm_toggle_s1 is not in sensitivity list.
+@W: CG290 :"/home/tony/Lattice/ufo.vhd":108:13:108:22|Referenced variable arm_toggle is not in sensitivity list.
+@W: CG290 :"/home/tony/Lattice/ufo.vhd":105:9:105:17|Referenced variable timed_out is not in sensitivity list.
+Post processing for work.ufo.behv
+Running optimization stage 1 on ufo .......
+@W: CL169 :"/home/tony/Lattice/ufo.vhd":120:2:120:3|Pruning unused register heartbeat_count_4(23 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/tony/Lattice/ufo.vhd":120:2:120:3|Pruning unused register heartbeat_flash_3. Make sure that there are no unused intermediate registers.
+@W: CL117 :"/home/tony/Lattice/ufo.vhd":105:5:105:6|Latch generated from process for signal armed; possible missing assignment in an if or case statement.
+@W: CL117 :"/home/tony/Lattice/ufo.vhd":105:5:105:6|Latch generated from process for signal arm_toggle_s1; possible missing assignment in an if or case statement.
+Running optimization stage 2 on ufo .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/tony/Lattice/UFO/impl1/synwork/layer0.rt.csv
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 147MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 18 15:28:59 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: /usr/local/diamond/3.12/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: localhost.localdomain
+max virtual memory: unlimited (bytes)
+max user processes: 392608
+max stack size: 8388608 (bytes)
+
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 184R, Built Oct 30 2020 10:19:07, @1018816
+
+@N|Running in 64-bit mode
+@N: NF107 :"/home/tony/Lattice/ufo.vhd":6:7:6:9|Selected library: work cell: ufo view behv as top level
+@N: NF107 :"/home/tony/Lattice/ufo.vhd":6:7:6:9|Selected library: work cell: ufo view behv as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 137MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 18 15:28:59 2022
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/tony/Lattice/UFO/impl1/synwork/impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 55MB peak: 55MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Jan 18 15:28:59 2022
+
+###########################################################]

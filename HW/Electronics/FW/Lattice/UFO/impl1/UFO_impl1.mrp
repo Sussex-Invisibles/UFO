@@ -1,0 +1,270 @@
+
+             Lattice Mapping Report File for Design Module 'top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3D -p LCMXO3D-4300ZC -t QFN72 -s 2 -oc Commercial
+     UFO_impl1.ngd -o UFO_impl1_map.ncd -pr UFO_impl1.prf -mp UFO_impl1.mrp -lpf
+      /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/impl1/UFO_impl1
+     .lpf -lpf
+     /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/UFO.lpf -c 0
+     -retime -tdm -split_node -td_pack -gui -msgset
+     /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3D-4300ZCQFN72
+Target Performance:   2
+Mapper:  se5c00,  version:  Diamond (64-bit) 3.12.1.454
+Mapped on:  09/15/22  12:46:44
+
+     No retiming is necessary for the given constraints
+
+Design Summary
+--------------
+
+   Number of registers:     29 out of  4497 (1%)
+      PFU registers:           29 out of  4320 (1%)
+      PIO registers:            0 out of   177 (0%)
+   Number of SLICEs:        42 out of  2160 (2%)
+      SLICEs as Logic/ROM:     42 out of  2160 (2%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:          9 out of  2160 (0%)
+   Number of LUT4s:         84 out of  4320 (2%)
+      Number used as logic LUTs:         66
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       18
+      Number used as shift registers:     0
+   Number of PIO sites used: 10 + 4(JTAG) out of 59 (24%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Security used :   No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCSLEWRATEA):  0 out of 6 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+
+                                    Page 1
+
+
+
+
+Design:  top                                           Date:  09/15/22  12:46:44
+
+Design Summary (cont)
+---------------------
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
+     Net trigger_p_c: 1 loads, 1 rising, 0 falling (Driver: PIO trigger_p )
+     Net ufo_module/toggle_s1_N_67: 1 loads, 1 rising, 0 falling (Driver:
+     ufo_module/rst_I_0_2_lut_3_lut_4_lut )
+     Net ufo_module/armed_N_71: 1 loads, 1 rising, 0 falling (Driver:
+     ufo_module/toggle_s1_N_68_I_0_2_lut_2_lut_3_lut_4_lut )
+   Number of Clock Enables:  3
+     Net clk_c_enable_19: 4 loads, 4 LSLICEs
+     Net ufo_module/clk_c_enable_25: 9 loads, 9 LSLICEs
+     Net ufo_module/clk_c_enable_20: 1 loads, 1 LSLICEs
+   Number of LSRs:  2
+     Net n1383: 14 loads, 14 LSLICEs
+     Net ufo_module/armed_N_71: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net ufo_module/pulse_timeout_1: 23 loads
+     Net ufo_module/pulse_timeout_7: 21 loads
+     Net n1383: 15 loads
+     Net ufo_module/pulse_timeout_2: 15 loads
+     Net ufo_module/pulse_timeout_3: 14 loads
+     Net ufo_module/pulse_timeout_4: 14 loads
+     Net ufo_module/pulse_timeout_6: 13 loads
+     Net ufo_module/n332: 12 loads
+     Net ufo_module/n333: 12 loads
+     Net ufo_module/pulse_timeout_5: 10 loads
+
+
+
+
+   Number of warnings:  4
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map:
+     /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/UFO.lpf(26):
+     Semantic error in "IOBUF PORT "trigger_n" IO_TYPE=LVCMOS33 ;": Port
+     "trigger_n" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: input pad net 'trigger_n' has no legal load.
+WARNING - map: Register ufo_module/armed_I_0_set has a clock signal tied to GND.
+WARNING - map: IO buffer missing for top level port trigger_n...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  top                                           Date:  09/15/22  12:46:44
+
+IO (PIO) Attributes (cont)
+--------------------------
+| led0                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led1                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led2                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led3                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led4                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led5                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led6                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led7                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| trigger_p           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i1267 undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal ufo_module/add_12_1/S0 undriven or does not drive anything - clipped.
+Signal ufo_module/add_12_1/CI undriven or does not drive anything - clipped.
+Signal ufo_module/add_12_17/S1 undriven or does not drive anything - clipped.
+Signal ufo_module/add_12_17/CO undriven or does not drive anything - clipped.
+Block i6 was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'n1382'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'n1382' via the GSR component.
+
+     Type and number of components of the type: 
+
+                                    Page 3
+
+
+
+
+Design:  top                                           Date:  09/15/22  12:46:44
+
+GSR Usage (cont)
+----------------
+   Register = 28 
+
+     Type and instance name of component: 
+   Register : ufo_module/pulse_timeout__i9
+   Register : ufo_module/pulse_timeout__i0
+   Register : ufo_module/pulse_timeout__i8
+   Register : ufo_module/led_arm__i4
+   Register : ufo_module/toggle_I_0_132
+   Register : ufo_module/toggle_120
+   Register : ufo_module/pulse_timeout__i7
+   Register : ufo_module/pulse_timeout__i6
+   Register : ufo_module/pulse_timeout__i10
+   Register : ufo_module/armed_I_0_set
+   Register : ufo_module/led_arm__i3
+   Register : ufo_module/led_arm__i2
+   Register : ufo_module/led_arm__i1
+   Register : ufo_module/led_arm__i5
+   Register : ufo_module/pulse_timeout__i5
+   Register : ufo_module/pulse_timeout__i4
+   Register : ufo_module/pulse_timeout__i3
+   Register : ufo_module/pulse_timeout__i2
+   Register : ufo_module/led_arm__i6
+   Register : ufo_module/pulse_timeout__i1
+   Register : ufo_module/led_arm__i0
+   Register : ufo_module/led_arm__i7
+   Register : ufo_module/timed_out_123
+   Register : ufo_module/pulse_timeout__i11
+   Register : ufo_module/pulse_timeout__i12
+   Register : ufo_module/pulse_timeout__i13
+   Register : ufo_module/pulse_timeout__i14
+   Register : ufo_module/pulse_timeout__i15
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 212 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 4
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.

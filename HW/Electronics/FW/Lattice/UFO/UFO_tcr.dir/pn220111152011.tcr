@@ -1,0 +1,21 @@
+#Start recording tcl command: 1/11/2022 15:11:08
+#Project Location: /home/tony/Lattice/UFO; Project name: UFO
+prj_project new -name "UFO" -impl "impl1" -dev LCMXO3D-4300ZC-2SG72C -synthesis "lse"
+prj_src add "/home/tony/Lattice/ufo.vhd"
+prj_project save
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run Map -impl impl1 -task MapTrace
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task IOTiming
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapVHDLSimFile
+prj_run PAR -impl impl1
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapTrace
+prj_run Map -impl impl1 -task MapTrace -forceOne
+prj_run Map -impl impl1 -task MapTrace
+source "/home/tony/Lattice/UFO/hdle_generate_Symbol.tcl"
+#Stop recording: 1/11/2022 15:20:11

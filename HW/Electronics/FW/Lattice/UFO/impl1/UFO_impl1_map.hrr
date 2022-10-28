@@ -1,0 +1,22 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      42.00        100.0
+                                  LUT4	      66.00        100.0
+                                 IOBUF	         10        100.0
+                                PFUREG	         29        100.0
+                                RIPPLE	          9        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                   ufo	          1        97.2
+---------------------------------------------------
+Report for cell ufo
+   Instance path: top/ufo_module
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.83        97.2
+                                  LUT4	      62.00        93.9
+                                PFUREG	         29        100.0
+                                RIPPLE	          9        100.0

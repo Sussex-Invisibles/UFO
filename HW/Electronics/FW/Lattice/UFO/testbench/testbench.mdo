@@ -1,0 +1,19 @@
+if {![file exists "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/testbench/testbench.mpf"]} { 
+	project new "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/testbench" testbench
+	project addfile "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/ufo.vhd"
+	project addfile "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/ufo_tb.vhd"
+	project addfile "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd"
+	vlib  work
+	vdel -lib work -all 
+	vlib work
+	vcom -work work "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/ufo.vhd"
+	vcom -work work "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/ufo_tb.vhd"
+	vcom -work work "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd"
+} else {
+	project open "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/testbench/testbench"
+	project compileoutofdate
+}
+vsim -L work -L pmi_work -L ovi_machxo3d  testbench
+view wave
+add wave /*
+run 1000ns

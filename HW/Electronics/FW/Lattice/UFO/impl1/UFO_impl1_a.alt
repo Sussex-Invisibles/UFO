@@ -1,0 +1,22 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Mar 17 13:31:13 2022 *
+NOTE DESIGN NAME: top *
+NOTE DEVICE NAME: LCMXO3D-4300ZC-2QFN72 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS led0 : 6 : out *
+NOTE PINS led1 : 7 : out *
+NOTE PINS led2 : 8 : out *
+NOTE PINS led3 : 9 : out *
+NOTE PINS led4 : 10 : out *
+NOTE PINS led5 : 11 : out *
+NOTE PINS led6 : 12 : out *
+NOTE PINS led7 : 13 : out *
+NOTE PINS clk : 23 : in *
+NOTE PINS trigger_p : 37 : in *
+NOTE PINS SYSCONFIG_PIN_MCLK : 19 : inout *
+NOTE PINS SYSCONFIG_PIN_SO : 20 : inout *
+NOTE PINS SYSCONFIG_PIN_SN : 35 : in *
+NOTE PINS SYSCONFIG_PIN_SI : 36 : inout *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

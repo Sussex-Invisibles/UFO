@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1081328</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PARTrace">
+        <Message>
+            <ID>1104941</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>1.260</Dynamic>
+            <Dynamic>1.045</Dynamic>
+            <Dynamic>1.155</Dynamic>
+            <Dynamic>1.155</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>52101259</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>armed_I_0_145_set</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>/home/tony/Lattice/impl1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(6): </Dynamic>
+            <Dynamic>ufo</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(19): </Dynamic>
+            <Dynamic>behv</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(103): </Dynamic>
+            <Dynamic>timed_out</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>103</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(106): </Dynamic>
+            <Dynamic>arm_toggle</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>106</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(106): </Dynamic>
+            <Dynamic>arm_toggle_s1</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>106</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(106): </Dynamic>
+            <Dynamic>armed</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>106</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(108): </Dynamic>
+            <Dynamic>arm_toggle</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>108</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(109): </Dynamic>
+            <Dynamic>fire</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>109</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(109): </Dynamic>
+            <Dynamic>armed</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>109</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(111): </Dynamic>
+            <Dynamic>arm_toggle</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>111</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(114): </Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>114</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/tony/Lattice/ufo.vhd(18): </Dynamic>
+            <Dynamic>ufo</Dynamic>
+            <Dynamic>behv</Dynamic>
+            <Navigation>/home/tony/Lattice/ufo.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>armed_I_0_145_set</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001752</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>armed_I_0_145_reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+</BaliMessageLog>

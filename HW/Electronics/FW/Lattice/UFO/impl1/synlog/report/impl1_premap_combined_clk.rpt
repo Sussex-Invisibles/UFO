@@ -1,0 +1,28 @@
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 27 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 2 clock pin(s) of sequential element(s)
+0 instances converted, 2 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_1       clk                 port                   25         led_arm[7]     
+@KP:ckid0_3       trigger             port                   2          fire           
+=======================================================================================
+============================================================= Gated/Generated Clocks =============================================================
+Clock Tree ID     Driving Element                Drive Element Type     Unconverted Fanout     Sample Instance     Explanation                    
+--------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       un1_timed_out_1.OUT[0]         mux                    1                      armed               Clock source is invalid for GCC
+@KP:ckid0_2       arm_toggle_s1_0_sqmuxa.OUT     and                    1                      arm_toggle_s1       Clock source is invalid for GCC
+==================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+

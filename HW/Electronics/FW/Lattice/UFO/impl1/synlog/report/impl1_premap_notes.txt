@@ -1,0 +1,12 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FX493 |Applying initial value "0" on instance arm_toggle.
+@N: FX493 |Applying initial value "0" on instance fire.
+@N: FX493 |Applying initial value "0" on instance toggle.
+@N: FX493 |Applying initial value "0" on instance arm_toggle_s1.
+@N: FX493 |Applying initial value "0" on instance timed_out.
+@N: FX493 |Applying initial value "00000000" on instance led_arm[7:0].
+@N: FX493 |Applying initial value "0" on instance armed.
+@N: FX1184 |Applying syn_allowed_resources blockrams=432 on top level netlist ufo 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.

@@ -1,0 +1,64 @@
+2 potential circuit loops found in timing analysis.
+Loading design for application iotiming from file UFO_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 3
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Loading design for application iotiming from file UFO_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: M
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+// Design: top
+// Package: QFN72
+// ncd File: UFO_impl1.ncd
+// Version: Diamond (64-bit) 3.12.1.454
+// Written on Thu Sep 15 12:47:23 2022
+// M: Minimum Performance Grade
+// iotiming UFO_impl1.ncd UFO_impl1.prf -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 3, 2):
+
+// Input Setup and Hold Times
+
+Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+(no input setup/hold data)
+
+
+// Clock to Output Delay
+
+Port  Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+led0  clk   R    23.125         2        8.322          M
+led1  clk   R    21.840         2        7.905          M
+led2  clk   R    23.392         2        8.312          M
+led3  clk   R    23.392         2        8.312          M
+led4  clk   R    21.208         2        7.760          M
+led5  clk   R    21.485         2        7.857          M
+led6  clk   R    22.617         2        8.161          M
+led7  clk   R    21.731         2        7.931          M
+
+
+// Internal_Clock to Output
+
+Port  Internal_Clock       
+--------------------------------------------------------
+led0  ufo_module/armed_N_71
+led1  ufo_module/armed_N_71
+led2  ufo_module/armed_N_71
+led3  ufo_module/armed_N_71
+led4  ufo_module/armed_N_71
+led5  ufo_module/armed_N_71
+led6  ufo_module/armed_N_71
+led7  ufo_module/armed_N_71

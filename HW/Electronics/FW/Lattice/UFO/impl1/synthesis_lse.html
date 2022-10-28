@@ -1,0 +1,266 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Sep 13 17:42:07 2022
+
+
+Command Line:  synthesis -f UFO_impl1_lattice.synproj -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml 
+
+Synthesis options:
+The -a option is MachXO3D.
+The -s option is 2.
+The -t option is QFN72.
+The -d option is LCMXO3D-4300ZC.
+Using package QFN72.
+Using performance grade 2.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO3D
+
+### Device  : LCMXO3D-4300ZC
+
+### Package : QFN72
+
+### Speed   : 2
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = top.
+Target frequency = 100.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 5
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.12/ispfpga/se5c00/data (searchpath added)
+-p /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/impl1 (searchpath added)
+-p /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO (searchpath added)
+VHDL library = work
+VHDL design file = /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/ufo.vhd
+VHDL design file = /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd
+NGD file = UFO_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.12/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo3d.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/impl1". VHDL-1504
+Analyzing VHDL file /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/ufo.vhd. VHDL-1481
+INFO - synthesis: /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/ufo.vhd(6): analyzing entity ufo. VHDL-1012
+INFO - synthesis: /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/ufo.vhd(19): analyzing architecture behv. VHDL-1010
+unit top is not yet analyzed. VHDL-1485
+Analyzing VHDL file /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd. VHDL-1481
+INFO - synthesis: /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd(6): analyzing entity top. VHDL-1012
+INFO - synthesis: /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd(23): analyzing architecture behv. VHDL-1010
+unit top is not yet analyzed. VHDL-1485
+unit top is not yet analyzed. VHDL-1485
+/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd(6): executing top(behv)
+
+WARNING - synthesis: /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/top.vhd(19): replacing existing netlist top(behv). VHDL-1205
+Top module name (VHDL): top
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Top-level module name = top.
+WARNING - synthesis: Initial value found on net fire will be ignored due to unrecognized driver type
+WARNING - synthesis: Initial value found on net armed_N_107 will be ignored due to unrecognized driver type
+WARNING - synthesis: I/O Port trigger_n 's net has no driver and is unused.
+
+
+
+WARNING - synthesis: I/O Port trigger_n 's net has no driver and is unused.
+GSR instance connected to net \ufo_module/armed_N_72.
+WARNING - synthesis: Initial value found on instance \ufo_module/armed_I_0_set will be ignored.
+WARNING - synthesis: mRegister \ufo_module/armed_I_0_reset is stuck at Zero
+Applying 100.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/se5c00/data/se5clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'trigger_n' has no load.
+WARNING - synthesis: input pad net 'trigger_n' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file UFO_impl1.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 29 of 4497 (0 % )
+CCU2D => 9
+FD1P3IX => 25
+FD1S1A => 2
+FD1S1B => 1
+FD1S3AX => 1
+GSR => 1
+IB => 2
+LUT4 => 67
+OB => 8
+PFUMX => 8
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : clk_c, loads : 25
+  Net : trigger_p_c, loads : 10
+  Net : ufo_module/armed_N_71, loads : 2
+  Net : ufo_module/toggle_s1_N_67, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 3
+Top 3 highest fanout Clock Enables:
+  Net : ufo_module/clk_c_enable_25, loads : 16
+  Net : clk_c_enable_19, loads : 1
+  Net : ufo_module/clk_c_enable_20, loads : 1
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : ufo_module/n1383, loads : 25
+  Net : ufo_module/pulse_timeout_1, loads : 25
+  Net : ufo_module/pulse_timeout_7, loads : 21
+  Net : ufo_module/clk_c_enable_25, loads : 16
+  Net : ufo_module/pulse_timeout_4, loads : 16
+  Net : ufo_module/pulse_timeout_2, loads : 16
+  Net : ufo_module/pulse_timeout_3, loads : 14
+  Net : ufo_module/pulse_timeout_6, loads : 13
+  Net : ufo_module/n333, loads : 12
+  Net : ufo_module/n332, loads : 12
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk3 [get_nets                          |             |             |
+\ufo_module/toggle_s1_N_67]             |            -|            -|     0  
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk2 [get_nets trigger_p_c]             |  100.000 MHz|  148.854 MHz|     2  
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk1 [get_nets clk_c]                   |  100.000 MHz|   51.377 MHz|     5 *
+                                        |             |             |
+create_clock -period 10.000000 -name    |             |             |
+clk0 [get_nets \ufo_module/armed_N_71]  |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 214.238  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.650  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

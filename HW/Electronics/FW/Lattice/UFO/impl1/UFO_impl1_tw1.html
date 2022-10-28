@@ -1,0 +1,575 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file UFO_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Loading device for application trce from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454</big></U></B>
+Thu Sep 15 12:46:45 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UFO_impl1.tw1 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml UFO_impl1_map.ncd UFO_impl1.prf 
+Design file:     UFO_impl1_map.ncd
+Preference file: UFO_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,2
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY PORT "clk" 26.000000 MHz (0 errors)</A></LI>            673 items scored, 0 timing errors detected.
+Report:   26.153MHz is the maximum frequency for this preference.
+
+<LI><A href='#map_twr_pref_0_1' Target='right'>FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns (0 errors)</A></LI>            2 items scored, 0 timing errors detected.
+Report:  150.150MHz is the maximum frequency for this preference.
+
+<LI><A href='#map_twr_pref_0_2' Target='right'>MAXSKEW PORT "led0" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_0_3' Target='right'>MAXSKEW PORT "led1" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_0_4' Target='right'>MAXSKEW PORT "led2" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_0_5' Target='right'>MAXSKEW PORT "led3" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_0_6' Target='right'>MAXSKEW PORT "led4" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_0_7' Target='right'>MAXSKEW PORT "led5" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_0_8' Target='right'>MAXSKEW PORT "led6" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_0_9' Target='right'>MAXSKEW PORT "led7" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+2 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY PORT "clk" 26.000000 MHz ;
+            673 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.056ns (weighted slack = 0.224ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ufo_module/i226  (from ufo_module/armed_N_71 +)
+   Destination:    FF         Data in        ufo_module/timed_out_123  (to clk_c +)
+
+   Delay:               9.041ns  (37.9% logic, 62.1% route), 4 logic levels.
+
+ Constraint Details:
+
+      9.041ns physical path delay ufo_module/SLICE_13 to SLICE_15 meets
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+      0.518ns CE_SET requirement (totaling 9.097ns) by 0.056ns
+
+ Physical Path Details:
+
+      Data path ufo_module/SLICE_13 to SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878 */SLICE_13.CLK to *e/SLICE_13.Q0 ufo_module/SLICE_13 (from ufo_module/armed_N_71)
+ROUTE        12   e 1.656 *e/SLICE_13.Q0 to *e/SLICE_29.B0 ufo_module/n332
+CTOF_DEL    ---     0.849 *e/SLICE_29.B0 to *e/SLICE_29.F0 ufo_module/SLICE_29
+ROUTE         1   e 0.648 *e/SLICE_29.F0 to *e/SLICE_29.C1 ufo_module/n1389
+CTOF_DEL    ---     0.849 *e/SLICE_29.C1 to *e/SLICE_29.F1 ufo_module/SLICE_29
+ROUTE         1   e 1.656 *e/SLICE_29.F1 to *e/SLICE_30.A0 ufo_module/n1176
+CTOF_DEL    ---     0.849 *e/SLICE_30.A0 to *e/SLICE_30.F0 ufo_module/SLICE_30
+ROUTE         1   e 1.656 *e/SLICE_30.F0 to    SLICE_15.CE ufo_module/clk_c_enable_20 (to clk_c)
+                  --------
+                    9.041   (37.9% logic, 62.1% route), 4 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+
+Report:   26.153MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="map_twr_pref_0_1"></A>Preference: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;
+            2 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 118.340ns
+         The internal maximum frequency of the following component is 150.150 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            trigger_p
+
+   Delay:               6.660ns -- based on Minimum Pulse Width
+
+
+Passed: The following path meets requirements by 121.738ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ufo_module/toggle_120  (from trigger_p_c +)
+   Destination:    FF         Data in        ufo_module/toggle_I_0_132  (to ufo_module/toggle_s1_N_67 +)
+
+   Delay:               2.534ns  (34.6% logic, 65.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      2.534ns physical path delay ufo_module/SLICE_16 to ufo_module/SLICE_17 meets
+    125.000ns delay constraint less
+      0.005ns total jitter less
+      0.723ns M_SET requirement (totaling 124.272ns) by 121.738ns
+
+ Physical Path Details:
+
+      Data path ufo_module/SLICE_16 to ufo_module/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878 */SLICE_16.CLK to *e/SLICE_16.Q0 ufo_module/SLICE_16 (from trigger_p_c)
+ROUTE         4   e 1.656 *e/SLICE_16.Q0 to *e/SLICE_17.M0 ufo_module/toggle (to ufo_module/toggle_s1_N_67)
+                  --------
+                    2.534   (34.6% logic, 65.4% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: trigger_p_c)
+
+Report:  150.150MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="map_twr_pref_0_2"></A>Preference: MAXSKEW PORT "led0" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_3"></A>Preference: MAXSKEW PORT "led1" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_4"></A>Preference: MAXSKEW PORT "led2" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_5"></A>Preference: MAXSKEW PORT "led3" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_6"></A>Preference: MAXSKEW PORT "led4" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_7"></A>Preference: MAXSKEW PORT "led5" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_8"></A>Preference: MAXSKEW PORT "led6" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_9"></A>Preference: MAXSKEW PORT "led7" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk" 26.000000 MHz ;    |   26.000 MHz|   26.153 MHz|   4  
+                                        |             |             |
+FREQUENCY PORT "trigger_p" 8.000000 MHz |             |             |
+CLOCK_JITTER 0.010000 ns ;              |    8.000 MHz|  150.150 MHz|   0  
+                                        |             |             |
+MAXSKEW PORT "led0" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led1" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led2" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led3" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led4" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led5" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led6" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led7" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: ufo_module/toggle_s1_N_67   Source: ufo_module/SLICE_17.F0   Loads: 1
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: trigger_p_c   Source: trigger_p.PAD
+      Covered under: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;   Transfers: 1
+
+Clock Domain: ufo_module/armed_N_71   Source: ufo_module/SLICE_16.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: trigger_p_c   Source: trigger_p.PAD   Loads: 10
+   Covered under: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 14
+   Covered under: FREQUENCY PORT "clk" 26.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: ufo_module/armed_N_71   Source: ufo_module/SLICE_16.F1
+      Covered under: FREQUENCY PORT "clk" 26.000000 MHz ;   Transfers: 1
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 675 paths, 9 nets, and 293 connections (89.06% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454</big></U></B>
+Thu Sep 15 12:46:46 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o UFO_impl1.tw1 -gui -msgset /home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml UFO_impl1_map.ncd UFO_impl1.prf 
+Design file:     UFO_impl1_map.ncd
+Preference file: UFO_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY PORT "clk" 26.000000 MHz (0 errors)</A></LI>            673 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_1' Target='right'>FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns (0 errors)</A></LI>            2 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_2' Target='right'>MAXSKEW PORT "led0" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_3' Target='right'>MAXSKEW PORT "led1" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_4' Target='right'>MAXSKEW PORT "led2" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_5' Target='right'>MAXSKEW PORT "led3" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_6' Target='right'>MAXSKEW PORT "led4" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_7' Target='right'>MAXSKEW PORT "led5" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_8' Target='right'>MAXSKEW PORT "led6" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_9' Target='right'>MAXSKEW PORT "led7" 0.100000 ns (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+2 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY PORT "clk" 26.000000 MHz ;
+            673 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.489ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ufo_module/pulse_timeout__i7  (from clk_c +)
+   Destination:    FF         Data in        ufo_module/led_arm__i5  (to clk_c +)
+
+   Delay:               0.457ns  (99.8% logic, 0.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.457ns physical path delay ufo_module/SLICE_8 to ufo_module/SLICE_11 meets
+     -0.032ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.032ns) by 0.489ns
+
+ Physical Path Details:
+
+      Data path ufo_module/SLICE_8 to ufo_module/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.257 *e/SLICE_8.CLK to *le/SLICE_8.Q0 ufo_module/SLICE_8 (from clk_c)
+ROUTE        21   e 0.000 *le/SLICE_8.Q0 to *e/SLICE_11.B1 ufo_module/pulse_timeout_7
+CTOF_DEL    ---     0.199 *e/SLICE_11.B1 to *e/SLICE_11.F1 ufo_module/SLICE_11
+ROUTE         1   e 0.001 *e/SLICE_11.F1 to */SLICE_11.DI1 ufo_module/n154 (to clk_c)
+                  --------
+                    0.457   (99.8% logic, 0.2% route), 2 logic levels.
+
+
+================================================================================
+<A name="map_twr_pref_1_1"></A>Preference: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;
+            2 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.324ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ufo_module/toggle_120  (from trigger_p_c +)
+   Destination:    FF         Data in        ufo_module/toggle_I_0_132  (to ufo_module/toggle_s1_N_67 +)
+
+   Delay:               0.257ns  (100.0% logic, 0.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.257ns physical path delay ufo_module/SLICE_16 to ufo_module/SLICE_17 meets
+     -0.067ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.067ns) by 0.324ns
+
+ Physical Path Details:
+
+      Data path ufo_module/SLICE_16 to ufo_module/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.257 */SLICE_16.CLK to *e/SLICE_16.Q0 ufo_module/SLICE_16 (from trigger_p_c)
+ROUTE         4   e 0.000 *e/SLICE_16.Q0 to *e/SLICE_17.M0 ufo_module/toggle (to ufo_module/toggle_s1_N_67)
+                  --------
+                    0.257   (100.0% logic, 0.0% route), 1 logic levels.
+
+
+================================================================================
+<A name="map_twr_pref_1_2"></A>Preference: MAXSKEW PORT "led0" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_1_3"></A>Preference: MAXSKEW PORT "led1" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_1_4"></A>Preference: MAXSKEW PORT "led2" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_1_5"></A>Preference: MAXSKEW PORT "led3" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_1_6"></A>Preference: MAXSKEW PORT "led4" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_1_7"></A>Preference: MAXSKEW PORT "led5" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_1_8"></A>Preference: MAXSKEW PORT "led6" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_1_9"></A>Preference: MAXSKEW PORT "led7" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk" 26.000000 MHz ;    |            -|            -|   2  
+                                        |             |             |
+FREQUENCY PORT "trigger_p" 8.000000 MHz |             |             |
+CLOCK_JITTER 0.010000 ns ;              |            -|            -|   1  
+                                        |             |             |
+MAXSKEW PORT "led0" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led1" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led2" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led3" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led4" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led5" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led6" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led7" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: ufo_module/toggle_s1_N_67   Source: ufo_module/SLICE_17.F0   Loads: 1
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: trigger_p_c   Source: trigger_p.PAD
+      Covered under: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;   Transfers: 1
+
+Clock Domain: ufo_module/armed_N_71   Source: ufo_module/SLICE_16.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: trigger_p_c   Source: trigger_p.PAD   Loads: 10
+   Covered under: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 14
+   Covered under: FREQUENCY PORT "clk" 26.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: ufo_module/armed_N_71   Source: ufo_module/SLICE_16.F1
+      Covered under: FREQUENCY PORT "clk" 26.000000 MHz ;   Transfers: 1
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 675 paths, 9 nets, and 293 connections (89.06% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

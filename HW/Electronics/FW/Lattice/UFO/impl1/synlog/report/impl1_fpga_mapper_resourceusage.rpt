@@ -1,0 +1,23 @@
+Resource Usage Report
+Part: lcmxo3d_4300zc-2
+
+Register bits: 42 of 6900 (1%)
+Latch bits:      2
+PIC Latch:       0
+I/O cells:       10
+
+Details:
+CCU2D:          9
+FD1P3AX:        9
+FD1S1A:         1
+FD1S1D:         1
+FD1S3AX:        4
+FD1S3IX:        29
+GSR:            1
+IB:             2
+INV:            4
+OB:             8
+ORCALUT4:       93
+PUR:            1
+VHI:            1
+VLO:            1

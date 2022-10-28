@@ -1,0 +1,28 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-layerid|0|-orig_srs|/home/tony/Lattice/UFO/impl1/synwork/impl1_comp.srs|-autotop|-prodtype|synplify_pro|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work"
+#CUR:"/usr/local/diamond/3.12/synpbase/linux_a_64/c_vhdl":1604079996
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/location.map":1604366779
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/std.vhd":1604079922
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/snps_haps_pkg.vhd":1604079923
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/std1164.vhd":1604079923
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/numeric.vhd":1604079920
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/umr_capim.vhd":1604079923
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/arith.vhd":1604079917
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/unsigned.vhd":1604079923
+#CUR:"/usr/local/diamond/3.12/synpbase/lib/vhd/hyperents.vhd":1604079919
+#CUR:"/usr/local/diamond/3.12/cae_library/synthesis/vhdl/machxo3d.vhd":1542270891
+#CUR:"/home/tony/Lattice/ufo.vhd":1642517168
+0 "/usr/local/diamond/3.12/cae_library/synthesis/vhdl/machxo3d.vhd" vhdl
+1 "/home/tony/Lattice/ufo.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 -1
+
+# Dependency Lists (Users Of)
+0 -1
+1 -1
+
+# Design Unit to File Association
+arch work ufo behv 1
+module work ufo 1

@@ -1,0 +1,12 @@
+#Start recording tcl command: 1/11/2022 14:57:34
+#Project Location: /home/tony/Lattice; Project name: test
+prj_project open "/home/tony/Lattice/test.ldf"
+prj_dev set -part LCMXO3D-4300ZC-2SG72C
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1
+prj_run PAR -impl impl1 -task PARTrace
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run PAR -impl impl1 -task PARTrace
+#Stop recording: 1/11/2022 15:10:12

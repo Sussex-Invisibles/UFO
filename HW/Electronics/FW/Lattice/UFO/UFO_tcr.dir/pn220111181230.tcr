@@ -1,0 +1,5 @@
+#Start recording tcl command: 1/11/2022 18:04:55
+#Project Location: /home/tony/Lattice/UFO; Project name: UFO
+prj_project open "/home/tony/Lattice/UFO/UFO.ldf"
+prj_run PAR -impl impl1 -task PARTrace
+#Stop recording: 1/11/2022 18:12:30

@@ -1,0 +1,949 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 9pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 9pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY><B>
+</B>
+<BR><PRE><A name="Report Header"></A>
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Thu Sep 15 12:47:24 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design file:     top
+Device,speed:    LCMXO3D-4300ZC,2
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+
+</A><A name="FREQUENCY PORT 'clk' 26.000000 MH"></A>================================================================================
+Preference: FREQUENCY PORT "clk" 26.000000 MHz ;
+            10 items scored, 10 timing errors detected.
+--------------------------------------------------------------------------------
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 15.402ns (weighted slack = -61.608ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_15">ufo_module/timed_out_123</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+
+   Delay:               8.561ns  (40.0% logic, 60.0% route), 4 logic levels.
+
+ Constraint Details:
+
+      8.561ns physical path delay ufo_module/SLICE_13 to SLICE_15 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 15.402ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.462,R12C16D.Q0,R13C16C.D0,ufo_module/n332:CTOF_DEL, 0.849,R13C16C.D0,R13C16C.F0,ufo_module/SLICE_29:ROUTE, 0.916,R13C16C.F0,R13C16C.C1,ufo_module/n1389:CTOF_DEL, 0.849,R13C16C.C1,R13C16C.F1,ufo_module/SLICE_29:ROUTE, 1.356,R13C16C.F1,R13C16B.D0,ufo_module/n1176:CTOF_DEL, 0.849,R13C16B.D0,R13C16B.F0,ufo_module/SLICE_30:ROUTE, 1.402,R13C16B.F0,R13C16D.CE,ufo_module/clk_c_enable_20">Data path</A> ufo_module/SLICE_13 to SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.462<A href="#@net:ufo_module/n332:R12C16D.Q0:R13C16C.D0:1.462">     R12C16D.Q0 to R13C16C.D0    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R13C16C.D0 to     R13C16C.F0 <A href="#@comp:ufo_module/SLICE_29">ufo_module/SLICE_29</A>
+ROUTE         1     0.916<A href="#@net:ufo_module/n1389:R13C16C.F0:R13C16C.C1:0.916">     R13C16C.F0 to R13C16C.C1    </A> <A href="#@net:ufo_module/n1389">ufo_module/n1389</A>
+CTOF_DEL    ---     0.849     R13C16C.C1 to     R13C16C.F1 <A href="#@comp:ufo_module/SLICE_29">ufo_module/SLICE_29</A>
+ROUTE         1     1.356<A href="#@net:ufo_module/n1176:R13C16C.F1:R13C16B.D0:1.356">     R13C16C.F1 to R13C16B.D0    </A> <A href="#@net:ufo_module/n1176">ufo_module/n1176</A>
+CTOF_DEL    ---     0.849     R13C16B.D0 to     R13C16B.F0 <A href="#@comp:ufo_module/SLICE_30">ufo_module/SLICE_30</A>
+ROUTE         1     1.402<A href="#@net:ufo_module/clk_c_enable_20:R13C16B.F0:R13C16D.CE:1.402">     R13C16B.F0 to R13C16D.CE    </A> <A href="#@net:ufo_module/clk_c_enable_20">ufo_module/clk_c_enable_20</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    8.561   (40.0% logic, 60.0% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R13C16D.CLK,clk_c">Destination Clock Path</A> clk to SLICE_15:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R13C16D.CLK:4.084">       23.PADDI to R13C16D.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 14.746ns (weighted slack = -58.984ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_11">ufo_module/led_arm__i5</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/led_arm__i4">ufo_module/led_arm__i4</A>
+
+   Delay:               7.905ns  (32.6% logic, 67.4% route), 3 logic levels.
+
+ Constraint Details:
+
+      7.905ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_11 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 14.746ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.569,R12C16D.Q0,R12C18A.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C18A.D1,R12C18A.F1,ufo_module/SLICE_41:ROUTE, 1.356,R12C18A.F1,R12C18D.D0,n1204:CTOF_DEL, 0.849,R12C18D.D0,R12C18D.F0,SLICE_25:ROUTE, 2.404,R12C18D.F0,R12C17C.CE,clk_c_enable_19">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.569<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C18A.D1:1.569">     R12C16D.Q0 to R12C18A.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C18A.D1 to     R12C18A.F1 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.356<A href="#@net:n1204:R12C18A.F1:R12C18D.D0:1.356">     R12C18A.F1 to R12C18D.D0    </A> <A href="#@net:n1204">n1204</A>
+CTOF_DEL    ---     0.849     R12C18D.D0 to     R12C18D.F0 <A href="#@comp:SLICE_25">SLICE_25</A>
+ROUTE         4     2.404<A href="#@net:clk_c_enable_19:R12C18D.F0:R12C17C.CE:2.404">     R12C18D.F0 to R12C17C.CE    </A> <A href="#@net:clk_c_enable_19">clk_c_enable_19</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    7.905   (32.6% logic, 67.4% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 14.746ns (weighted slack = -58.984ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_12">ufo_module/led_arm__i7</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/led_arm__i6">ufo_module/led_arm__i6</A>
+
+   Delay:               7.905ns  (32.6% logic, 67.4% route), 3 logic levels.
+
+ Constraint Details:
+
+      7.905ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_12 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 14.746ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.569,R12C16D.Q0,R12C18A.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C18A.D1,R12C18A.F1,ufo_module/SLICE_41:ROUTE, 1.356,R12C18A.F1,R12C18D.D0,n1204:CTOF_DEL, 0.849,R12C18D.D0,R12C18D.F0,SLICE_25:ROUTE, 2.404,R12C18D.F0,R12C17B.CE,clk_c_enable_19">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.569<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C18A.D1:1.569">     R12C16D.Q0 to R12C18A.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C18A.D1 to     R12C18A.F1 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.356<A href="#@net:n1204:R12C18A.F1:R12C18D.D0:1.356">     R12C18A.F1 to R12C18D.D0    </A> <A href="#@net:n1204">n1204</A>
+CTOF_DEL    ---     0.849     R12C18D.D0 to     R12C18D.F0 <A href="#@comp:SLICE_25">SLICE_25</A>
+ROUTE         4     2.404<A href="#@net:clk_c_enable_19:R12C18D.F0:R12C17B.CE:2.404">     R12C18D.F0 to R12C17B.CE    </A> <A href="#@net:clk_c_enable_19">clk_c_enable_19</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    7.905   (32.6% logic, 67.4% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17B.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17B.CLK:4.084">       23.PADDI to R12C17B.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 13.825ns (weighted slack = -55.300ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_10">ufo_module/led_arm__i3</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/led_arm__i2">ufo_module/led_arm__i2</A>
+
+   Delay:               6.984ns  (36.9% logic, 63.1% route), 3 logic levels.
+
+ Constraint Details:
+
+      6.984ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_10 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 13.825ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.569,R12C16D.Q0,R12C18A.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C18A.D1,R12C18A.F1,ufo_module/SLICE_41:ROUTE, 1.356,R12C18A.F1,R12C18D.D0,n1204:CTOF_DEL, 0.849,R12C18D.D0,R12C18D.F0,SLICE_25:ROUTE, 1.483,R12C18D.F0,R12C18C.CE,clk_c_enable_19">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.569<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C18A.D1:1.569">     R12C16D.Q0 to R12C18A.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C18A.D1 to     R12C18A.F1 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.356<A href="#@net:n1204:R12C18A.F1:R12C18D.D0:1.356">     R12C18A.F1 to R12C18D.D0    </A> <A href="#@net:n1204">n1204</A>
+CTOF_DEL    ---     0.849     R12C18D.D0 to     R12C18D.F0 <A href="#@comp:SLICE_25">SLICE_25</A>
+ROUTE         4     1.483<A href="#@net:clk_c_enable_19:R12C18D.F0:R12C18C.CE:1.483">     R12C18D.F0 to R12C18C.CE    </A> <A href="#@net:clk_c_enable_19">clk_c_enable_19</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    6.984   (36.9% logic, 63.1% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C18C.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_10:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C18C.CLK:4.084">       23.PADDI to R12C18C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 13.825ns (weighted slack = -55.300ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_9">ufo_module/led_arm__i1</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/led_arm__i0">ufo_module/led_arm__i0</A>
+
+   Delay:               6.984ns  (36.9% logic, 63.1% route), 3 logic levels.
+
+ Constraint Details:
+
+      6.984ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_9 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 13.825ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.569,R12C16D.Q0,R12C18A.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C18A.D1,R12C18A.F1,ufo_module/SLICE_41:ROUTE, 1.356,R12C18A.F1,R12C18D.D0,n1204:CTOF_DEL, 0.849,R12C18D.D0,R12C18D.F0,SLICE_25:ROUTE, 1.483,R12C18D.F0,R12C18B.CE,clk_c_enable_19">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.569<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C18A.D1:1.569">     R12C16D.Q0 to R12C18A.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C18A.D1 to     R12C18A.F1 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.356<A href="#@net:n1204:R12C18A.F1:R12C18D.D0:1.356">     R12C18A.F1 to R12C18D.D0    </A> <A href="#@net:n1204">n1204</A>
+CTOF_DEL    ---     0.849     R12C18D.D0 to     R12C18D.F0 <A href="#@comp:SLICE_25">SLICE_25</A>
+ROUTE         4     1.483<A href="#@net:clk_c_enable_19:R12C18D.F0:R12C18B.CE:1.483">     R12C18D.F0 to R12C18B.CE    </A> <A href="#@net:clk_c_enable_19">clk_c_enable_19</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    6.984   (36.9% logic, 63.1% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C18B.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_9:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C18B.CLK:4.084">       23.PADDI to R12C18B.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 12.645ns (weighted slack = -50.580ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_6">ufo_module/pulse_timeout__i10</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/pulse_timeout__i9">ufo_module/pulse_timeout__i9</A>
+
+   Delay:               5.804ns  (29.8% logic, 70.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      5.804ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_6 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 12.645ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.516,R12C16D.Q0,R12C16D.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C16D.D1,R12C16D.F1,ufo_module/SLICE_13:ROUTE, 2.561,R12C16D.F1,R12C15B.CE,ufo_module/clk_c_enable_25">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.516<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C16D.D1:1.516">     R12C16D.Q0 to R12C16D.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C16D.D1 to     R12C16D.F1 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A>
+ROUTE         9     2.561<A href="#@net:ufo_module/clk_c_enable_25:R12C16D.F1:R12C15B.CE:2.561">     R12C16D.F1 to R12C15B.CE    </A> <A href="#@net:ufo_module/clk_c_enable_25">ufo_module/clk_c_enable_25</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    5.804   (29.8% logic, 70.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C15B.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C15B.CLK:4.084">       23.PADDI to R12C15B.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 12.645ns (weighted slack = -50.580ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_3">ufo_module/pulse_timeout__i14</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/pulse_timeout__i13">ufo_module/pulse_timeout__i13</A>
+
+   Delay:               5.804ns  (29.8% logic, 70.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      5.804ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_3 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 12.645ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.516,R12C16D.Q0,R12C16D.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C16D.D1,R12C16D.F1,ufo_module/SLICE_13:ROUTE, 2.561,R12C16D.F1,R12C15D.CE,ufo_module/clk_c_enable_25">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.516<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C16D.D1:1.516">     R12C16D.Q0 to R12C16D.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C16D.D1 to     R12C16D.F1 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A>
+ROUTE         9     2.561<A href="#@net:ufo_module/clk_c_enable_25:R12C16D.F1:R12C15D.CE:2.561">     R12C16D.F1 to R12C15D.CE    </A> <A href="#@net:ufo_module/clk_c_enable_25">ufo_module/clk_c_enable_25</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    5.804   (29.8% logic, 70.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C15D.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C15D.CLK:4.084">       23.PADDI to R12C15D.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 12.645ns (weighted slack = -50.580ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_4">ufo_module/pulse_timeout__i12</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/pulse_timeout__i11">ufo_module/pulse_timeout__i11</A>
+
+   Delay:               5.804ns  (29.8% logic, 70.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      5.804ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_4 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 12.645ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.516,R12C16D.Q0,R12C16D.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C16D.D1,R12C16D.F1,ufo_module/SLICE_13:ROUTE, 2.561,R12C16D.F1,R12C15C.CE,ufo_module/clk_c_enable_25">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.516<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C16D.D1:1.516">     R12C16D.Q0 to R12C16D.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C16D.D1 to     R12C16D.F1 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A>
+ROUTE         9     2.561<A href="#@net:ufo_module/clk_c_enable_25:R12C16D.F1:R12C15C.CE:2.561">     R12C16D.F1 to R12C15C.CE    </A> <A href="#@net:ufo_module/clk_c_enable_25">ufo_module/clk_c_enable_25</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    5.804   (29.8% logic, 70.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C15C.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C15C.CLK:4.084">       23.PADDI to R12C15C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 12.645ns (weighted slack = -50.580ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_8">ufo_module/pulse_timeout__i8</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/pulse_timeout__i7">ufo_module/pulse_timeout__i7</A>
+
+   Delay:               5.804ns  (29.8% logic, 70.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      5.804ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_8 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 12.645ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.516,R12C16D.Q0,R12C16D.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C16D.D1,R12C16D.F1,ufo_module/SLICE_13:ROUTE, 2.561,R12C16D.F1,R12C15A.CE,ufo_module/clk_c_enable_25">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.516<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C16D.D1:1.516">     R12C16D.Q0 to R12C16D.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C16D.D1 to     R12C16D.F1 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A>
+ROUTE         9     2.561<A href="#@net:ufo_module/clk_c_enable_25:R12C16D.F1:R12C15A.CE:2.561">     R12C16D.F1 to R12C15A.CE    </A> <A href="#@net:ufo_module/clk_c_enable_25">ufo_module/clk_c_enable_25</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    5.804   (29.8% logic, 70.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C15A.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C15A.CLK:4.084">       23.PADDI to R12C15A.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+<font color=#FF0000> 
+
+Error: The following path exceeds requirements by 12.585ns (weighted slack = -50.340ns)
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_13">ufo_module/i226</A>  (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_0">ufo_module/pulse_timeout__i2</A>  (to <A href="#@net:clk_c">clk_c</A> +)
+                   FF                        <A href="#@net:ufo_module/pulse_timeout__i1">ufo_module/pulse_timeout__i1</A>
+
+   Delay:               5.744ns  (30.1% logic, 69.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      5.744ns physical path delay ufo_module/SLICE_13 to ufo_module/SLICE_0 exceeds
+      (delay constraint based on source clock period of 125.000ns and destination clock period of 38.462ns)
+      9.620ns delay constraint less
+      0.005ns total jitter less
+     15.938ns skew and
+      0.518ns CE_SET requirement (totaling -6.841ns) by 12.585ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:REG_DEL, 0.878,R12C16D.CLK,R12C16D.Q0,ufo_module/SLICE_13:ROUTE, 1.516,R12C16D.Q0,R12C16D.D1,ufo_module/n332:CTOF_DEL, 0.849,R12C16D.D1,R12C16D.F1,ufo_module/SLICE_13:ROUTE, 2.501,R12C16D.F1,R12C14B.CE,ufo_module/clk_c_enable_25">Data path</A> ufo_module/SLICE_13 to ufo_module/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R12C16D.CLK to     R12C16D.Q0 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A> (from <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>)
+ROUTE        12     1.516<A href="#@net:ufo_module/n332:R12C16D.Q0:R12C16D.D1:1.516">     R12C16D.Q0 to R12C16D.D1    </A> <A href="#@net:ufo_module/n332">ufo_module/n332</A>
+CTOF_DEL    ---     0.849     R12C16D.D1 to     R12C16D.F1 <A href="#@comp:ufo_module/SLICE_13">ufo_module/SLICE_13</A>
+ROUTE         9     2.501<A href="#@net:ufo_module/clk_c_enable_25:R12C16D.F1:R12C14B.CE:2.501">     R12C16D.F1 to R12C14B.CE    </A> <A href="#@net:ufo_module/clk_c_enable_25">ufo_module/clk_c_enable_25</A> (to <A href="#@net:clk_c">clk_c</A>)
+                  --------
+                    5.744   (30.1% logic, 69.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C17C.CLK,clk_c:REG_DEL, 0.878,R12C17C.CLK,R12C17C.Q1,ufo_module/SLICE_11:ROUTE, 2.149,R12C17C.Q1,R12C18A.A0,ufo_module/led_arm_5:CTOF_DEL, 0.849,R12C18A.A0,R12C18A.F0,ufo_module/SLICE_41:ROUTE, 1.441,R12C18A.F0,R12C17D.B0,ufo_module/n1230:CTOF_DEL, 0.849,R12C17D.B0,R12C17D.F0,ufo_module/SLICE_28:ROUTE, 2.210,R12C17D.F0,R14C16C.D0,ufo_module/fire:CTOF_DEL, 0.849,R14C16C.D0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67:REG_DEL, 0.878,R14C16C.CLK,R14C16C.Q0,ufo_module/SLICE_17:ROUTE, 1.413,R14C16C.Q0,R13C16A.D1,ufo_module/toggle_s1:CTOF_DEL, 0.849,R13C16A.D1,R13C16A.F1,ufo_module/SLICE_16:ROUTE, 2.286,R13C16A.F1,R12C16D.CLK,ufo_module/armed_N_71">Source Clock Path</A> clk to ufo_module/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C17C.CLK:4.084">       23.PADDI to R12C17C.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+REG_DEL     ---     0.878    R12C17C.CLK to     R12C17C.Q1 <A href="#@comp:ufo_module/SLICE_11">ufo_module/SLICE_11</A>
+ROUTE         2     2.149<A href="#@net:ufo_module/led_arm_5:R12C17C.Q1:R12C18A.A0:2.149">     R12C17C.Q1 to R12C18A.A0    </A> <A href="#@net:ufo_module/led_arm_5">ufo_module/led_arm_5</A>
+CTOF_DEL    ---     0.849     R12C18A.A0 to     R12C18A.F0 <A href="#@comp:ufo_module/SLICE_41">ufo_module/SLICE_41</A>
+ROUTE         1     1.441<A href="#@net:ufo_module/n1230:R12C18A.F0:R12C17D.B0:1.441">     R12C18A.F0 to R12C17D.B0    </A> <A href="#@net:ufo_module/n1230">ufo_module/n1230</A>
+CTOF_DEL    ---     0.849     R12C17D.B0 to     R12C17D.F0 <A href="#@comp:ufo_module/SLICE_28">ufo_module/SLICE_28</A>
+ROUTE         6     2.210<A href="#@net:ufo_module/fire:R12C17D.F0:R14C16C.D0:2.210">     R12C17D.F0 to R14C16C.D0    </A> <A href="#@net:ufo_module/fire">ufo_module/fire</A>
+CTOF_DEL    ---     0.849     R14C16C.D0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+REG_DEL     ---     0.878    R14C16C.CLK to     R14C16C.Q0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         2     1.413<A href="#@net:ufo_module/toggle_s1:R14C16C.Q0:R13C16A.D1:1.413">     R14C16C.Q0 to R13C16A.D1    </A> <A href="#@net:ufo_module/toggle_s1">ufo_module/toggle_s1</A>
+CTOF_DEL    ---     0.849     R13C16A.D1 to     R13C16A.F1 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         2     2.286<A href="#@net:ufo_module/armed_N_71:R13C16A.F1:R12C16D.CLK:2.286">     R13C16A.F1 to R12C16D.CLK   </A> <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>
+                  --------
+                   21.279   (30.1% logic, 69.9% route), 7 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'clk' 26.000000 MHz ;:PADI_DEL, 1.257,23.PAD,23.PADDI,clk:ROUTE, 4.084,23.PADDI,R12C14B.CLK,clk_c">Destination Clock Path</A> clk to ufo_module/SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         23.PAD to       23.PADDI <A href="#@comp:clk">clk</A>
+ROUTE        14     4.084<A href="#@net:clk_c:23.PADDI:R12C14B.CLK:4.084">       23.PADDI to R12C14B.CLK   </A> <A href="#@net:clk_c">clk_c</A>
+                  --------
+                    5.341   (23.5% logic, 76.5% route), 1 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: ufo_module/armed_N_71)
+
+Warning:   9.996MHz is the maximum frequency for this preference.
+
+
+</A><A name="FREQUENCY PORT 'trigger_p' 8.000000 MHz CLOCK_JITTER 0.010000 n"></A>================================================================================
+Preference: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;
+            2 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 118.340ns
+         The internal maximum frequency of the following component is 150.150 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            <A href="#@comp:trigger_p">trigger_p</A>
+
+   Delay:               6.660ns -- based on Minimum Pulse Width
+<font color=#000000> 
+
+Passed: The following path meets requirements by 121.408ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_16">ufo_module/toggle_120</A>  (from <A href="#@net:trigger_p_c">trigger_p_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_16">ufo_module/toggle_120</A>  (to <A href="#@net:trigger_p_c">trigger_p_c</A> +)
+
+   Delay:               3.192ns  (54.1% logic, 45.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.192ns physical path delay ufo_module/SLICE_16 to ufo_module/SLICE_16 meets
+    125.000ns delay constraint less
+      0.005ns total jitter less
+      0.000ns skew and
+      0.395ns DIN_SET requirement (totaling 124.600ns) by 121.408ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'trigger_p' 8.000000 MHz CLOCK_JITTER 0.010000 ns ;:REG_DEL, 0.878,R13C16A.CLK,R13C16A.Q0,ufo_module/SLICE_16:ROUTE, 1.465,R13C16A.Q0,R13C16A.A0,ufo_module/toggle:CTOF_DEL, 0.849,R13C16A.A0,R13C16A.F0,ufo_module/SLICE_16:ROUTE, 0.000,R13C16A.F0,R13C16A.DI0,ufo_module/toggle_N_66">Data path</A> ufo_module/SLICE_16 to ufo_module/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R13C16A.CLK to     R13C16A.Q0 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A> (from <A href="#@net:trigger_p_c">trigger_p_c</A>)
+ROUTE         4     1.465<A href="#@net:ufo_module/toggle:R13C16A.Q0:R13C16A.A0:1.465">     R13C16A.Q0 to R13C16A.A0    </A> <A href="#@net:ufo_module/toggle">ufo_module/toggle</A>
+CTOF_DEL    ---     0.849     R13C16A.A0 to     R13C16A.F0 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         1     0.000<A href="#@net:ufo_module/toggle_N_66:R13C16A.F0:R13C16A.DI0:0.000">     R13C16A.F0 to R13C16A.DI0   </A> <A href="#@net:ufo_module/toggle_N_66">ufo_module/toggle_N_66</A> (to <A href="#@net:trigger_p_c">trigger_p_c</A>)
+                  --------
+                    3.192   (54.1% logic, 45.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'trigger_p' 8.000000 MHz CLOCK_JITTER 0.010000 ns ;:ROUTE, 6.033,43.PADDI,R13C16A.CLK,trigger_p_c">Source Clock Path</A> trigger_p to ufo_module/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        10     6.033<A href="#@net:trigger_p_c:43.PADDI:R13C16A.CLK:6.033">       43.PADDI to R13C16A.CLK   </A> <A href="#@net:trigger_p_c">trigger_p_c</A>
+                  --------
+                    6.033   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'trigger_p' 8.000000 MHz CLOCK_JITTER 0.010000 ns ;:ROUTE, 6.033,43.PADDI,R13C16A.CLK,trigger_p_c">Destination Clock Path</A> trigger_p to ufo_module/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        10     6.033<A href="#@net:trigger_p_c:43.PADDI:R13C16A.CLK:6.033">       43.PADDI to R13C16A.CLK   </A> <A href="#@net:trigger_p_c">trigger_p_c</A>
+                  --------
+                    6.033   (0.0% logic, 100.0% route), 0 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: trigger_p_c)
+<font color=#000000> 
+
+Passed: The following path meets requirements by 127.271ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ufo_module/SLICE_16">ufo_module/toggle_120</A>  (from <A href="#@net:trigger_p_c">trigger_p_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ufo_module/SLICE_17">ufo_module/toggle_I_0_132</A>  (to <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A> +)
+
+   Delay:               3.134ns  (28.0% logic, 72.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      3.134ns physical path delay ufo_module/SLICE_16 to ufo_module/SLICE_17 meets
+    125.000ns delay constraint less
+      0.005ns total jitter less
+     -6.133ns skew and
+      0.723ns M_SET requirement (totaling 130.405ns) by 127.271ns
+
+ Physical Path Details:
+
+      <A href="#@path:FREQUENCY PORT 'trigger_p' 8.000000 MHz CLOCK_JITTER 0.010000 ns ;:REG_DEL, 0.878,R13C16A.CLK,R13C16A.Q0,ufo_module/SLICE_16:ROUTE, 2.256,R13C16A.Q0,R14C16C.M0,ufo_module/toggle">Data path</A> ufo_module/SLICE_16 to ufo_module/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    R13C16A.CLK to     R13C16A.Q0 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A> (from <A href="#@net:trigger_p_c">trigger_p_c</A>)
+ROUTE         4     2.256<A href="#@net:ufo_module/toggle:R13C16A.Q0:R14C16C.M0:2.256">     R13C16A.Q0 to R14C16C.M0    </A> <A href="#@net:ufo_module/toggle">ufo_module/toggle</A> (to <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>)
+                  --------
+                    3.134   (28.0% logic, 72.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:FREQUENCY PORT 'trigger_p' 8.000000 MHz CLOCK_JITTER 0.010000 ns ;:PADI_DEL, 1.257,43.PAD,43.PADDI,trigger_p:ROUTE, 6.033,43.PADDI,R13C16A.CLK,trigger_p_c">Source Clock Path</A> trigger_p to ufo_module/SLICE_16:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         43.PAD to       43.PADDI <A href="#@comp:trigger_p">trigger_p</A>
+ROUTE        10     6.033<A href="#@net:trigger_p_c:43.PADDI:R13C16A.CLK:6.033">       43.PADDI to R13C16A.CLK   </A> <A href="#@net:trigger_p_c">trigger_p_c</A>
+                  --------
+                    7.290   (17.2% logic, 82.8% route), 1 logic levels.
+
+      <A href="#@path:FREQUENCY PORT 'trigger_p' 8.000000 MHz CLOCK_JITTER 0.010000 ns ;:PADI_DEL, 1.257,43.PAD,43.PADDI,trigger_p:ROUTE, 6.033,43.PADDI,R13C16A.CLK,trigger_p_c:REG_DEL, 0.878,R13C16A.CLK,R13C16A.Q0,ufo_module/SLICE_16:ROUTE, 3.119,R13C16A.Q0,R14C16C.B0,ufo_module/toggle:CTOF_DEL, 0.849,R14C16C.B0,R14C16C.F0,ufo_module/SLICE_17:ROUTE, 1.287,R14C16C.F0,R14C16C.CLK,ufo_module/toggle_s1_N_67">Destination Clock Path</A> trigger_p to ufo_module/SLICE_17:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.257         43.PAD to       43.PADDI <A href="#@comp:trigger_p">trigger_p</A>
+ROUTE        10     6.033<A href="#@net:trigger_p_c:43.PADDI:R13C16A.CLK:6.033">       43.PADDI to R13C16A.CLK   </A> <A href="#@net:trigger_p_c">trigger_p_c</A>
+REG_DEL     ---     0.878    R13C16A.CLK to     R13C16A.Q0 <A href="#@comp:ufo_module/SLICE_16">ufo_module/SLICE_16</A>
+ROUTE         4     3.119<A href="#@net:ufo_module/toggle:R13C16A.Q0:R14C16C.B0:3.119">     R13C16A.Q0 to R14C16C.B0    </A> <A href="#@net:ufo_module/toggle">ufo_module/toggle</A>
+CTOF_DEL    ---     0.849     R14C16C.B0 to     R14C16C.F0 <A href="#@comp:ufo_module/SLICE_17">ufo_module/SLICE_17</A>
+ROUTE         1     1.287<A href="#@net:ufo_module/toggle_s1_N_67:R14C16C.F0:R14C16C.CLK:1.287">     R14C16C.F0 to R14C16C.CLK   </A> <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>
+                  --------
+                   13.423   (22.2% logic, 77.8% route), 3 logic levels.
+
+ Total jitter: 0.005ns
+     0.005ns (clock jitter: trigger_p_c)
+
+Report:  150.150MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: MAXSKEW PORT "led0" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: MAXSKEW PORT "led1" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: MAXSKEW PORT "led2" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: MAXSKEW PORT "led3" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: MAXSKEW PORT "led4" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: MAXSKEW PORT "led5" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: MAXSKEW PORT "led6" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: MAXSKEW PORT "led7" 0.100000 ns ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+<A name="Report Summary"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "clk" 26.000000 MHz ;    |   26.000 MHz|    9.996 MHz|   4 *
+                                        |             |             |
+FREQUENCY PORT "trigger_p" 8.000000 MHz |             |             |
+CLOCK_JITTER 0.010000 ns ;              |    8.000 MHz|  150.150 MHz|   0  
+                                        |             |             |
+MAXSKEW PORT "led0" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led1" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led2" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led3" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led4" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led5" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led6" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+MAXSKEW PORT "led7" 0.100000 ns ;       |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+ufo_module/n332                         |      12|      10|    100.00%
+                                        |        |        |
+ufo_module/clk_c_enable_25              |       9|       5|     50.00%
+                                        |        |        |
+clk_c_enable_19                         |       4|       4|     40.00%
+                                        |        |        |
+n1204                                   |       1|       4|     40.00%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+<A name="Clock Domains Analysis"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: <A href="#@net:ufo_module/toggle_s1_N_67">ufo_module/toggle_s1_N_67</A>   Source: ufo_module/SLICE_17.F0   Loads: 1
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:trigger_p_c">trigger_p_c</A>   Source: trigger_p.PAD
+      Covered under: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;   Transfers: 1
+
+Clock Domain: <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>   Source: ufo_module/SLICE_16.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: <A href="#@net:trigger_p_c">trigger_p_c</A>   Source: trigger_p.PAD   Loads: 10
+   Covered under: FREQUENCY PORT "trigger_p" 8.000000 MHz CLOCK_JITTER 0.010000 ns ;
+
+Clock Domain: <A href="#@net:clk_c">clk_c</A>   Source: clk.PAD   Loads: 14
+   Covered under: FREQUENCY PORT "clk" 26.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:ufo_module/armed_N_71">ufo_module/armed_N_71</A>   Source: ufo_module/SLICE_16.F1
+      Covered under: FREQUENCY PORT "clk" 26.000000 MHz ;   Transfers: 1
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 10  Score: 542836
+Cumulative negative slack: 542836
+
+Constraints cover 675 paths, 9 nets, and 293 connections (89.06% coverage)
+

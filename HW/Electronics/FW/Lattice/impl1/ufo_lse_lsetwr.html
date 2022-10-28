@@ -1,0 +1,301 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue Jan 11 15:00:21 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     ufo
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets armed_N_85]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets trigger_c]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets arm_toggle_s1_N_92]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            1575 items scored, 1575 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 21.991ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             pulse_timeout_237__i9  (from clk_c +)
+   Destination:    FD1P3IX    SP             led_arm__i1  (to clk_c +)
+
+   Delay:                  26.501ns  (25.1% logic, 74.9% route), 9 logic levels.
+
+ Constraint Details:
+
+     26.501ns data_path pulse_timeout_237__i9 to led_arm__i1 violates
+      5.000ns delay constraint less
+      0.490ns LCE_S requirement (totaling 4.510ns) by 21.991ns
+
+ Path Details: pulse_timeout_237__i9 to led_arm__i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              pulse_timeout_237__i9 (from clk_c)
+Route         2   e 2.475                                  pulse_timeout[9]
+LUT4        ---     0.848              A to Z              i6_4_lut
+Route         1   e 1.940                                  n14
+LUT4        ---     0.848              B to Z              i7_4_lut
+Route        10   e 3.321                                  n152
+LUT4        ---     0.848              B to Z              i1_2_lut_rep_17
+Route         2   e 2.355                                  n1768
+LUT4        ---     0.848              B to Z              i2_3_lut_rep_12_4_lut
+Route         3   e 2.599                                  n1763
+MUXL5       ---     0.401           BLUT to Z              i1222
+Route         1   e 1.940                                  n1803
+LUT4        ---     0.848              A to Z              n1803_bdd_3_lut
+Route         1   e 0.020                                  n1804
+MUXL5       ---     0.401           ALUT to Z              i1226
+Route         1   e 1.940                                  n1808
+LUT4        ---     0.848              C to Z              i1_2_lut_3_lut_adj_11
+Route         9   e 3.258                                  clk_c_enable_9
+                  --------
+                   26.501  (25.1% logic, 74.9% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 21.991ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             pulse_timeout_237__i9  (from clk_c +)
+   Destination:    FD1P3IX    SP             led_arm__i2  (to clk_c +)
+
+   Delay:                  26.501ns  (25.1% logic, 74.9% route), 9 logic levels.
+
+ Constraint Details:
+
+     26.501ns data_path pulse_timeout_237__i9 to led_arm__i2 violates
+      5.000ns delay constraint less
+      0.490ns LCE_S requirement (totaling 4.510ns) by 21.991ns
+
+ Path Details: pulse_timeout_237__i9 to led_arm__i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              pulse_timeout_237__i9 (from clk_c)
+Route         2   e 2.475                                  pulse_timeout[9]
+LUT4        ---     0.848              A to Z              i6_4_lut
+Route         1   e 1.940                                  n14
+LUT4        ---     0.848              B to Z              i7_4_lut
+Route        10   e 3.321                                  n152
+LUT4        ---     0.848              B to Z              i1_2_lut_rep_17
+Route         2   e 2.355                                  n1768
+LUT4        ---     0.848              B to Z              i2_3_lut_rep_12_4_lut
+Route         3   e 2.599                                  n1763
+MUXL5       ---     0.401           BLUT to Z              i1222
+Route         1   e 1.940                                  n1803
+LUT4        ---     0.848              A to Z              n1803_bdd_3_lut
+Route         1   e 0.020                                  n1804
+MUXL5       ---     0.401           ALUT to Z              i1226
+Route         1   e 1.940                                  n1808
+LUT4        ---     0.848              C to Z              i1_2_lut_3_lut_adj_11
+Route         9   e 3.258                                  clk_c_enable_9
+                  --------
+                   26.501  (25.1% logic, 74.9% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 21.991ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             pulse_timeout_237__i9  (from clk_c +)
+   Destination:    FD1P3IX    SP             led_arm__i3  (to clk_c +)
+
+   Delay:                  26.501ns  (25.1% logic, 74.9% route), 9 logic levels.
+
+ Constraint Details:
+
+     26.501ns data_path pulse_timeout_237__i9 to led_arm__i3 violates
+      5.000ns delay constraint less
+      0.490ns LCE_S requirement (totaling 4.510ns) by 21.991ns
+
+ Path Details: pulse_timeout_237__i9 to led_arm__i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.763             CK to Q              pulse_timeout_237__i9 (from clk_c)
+Route         2   e 2.475                                  pulse_timeout[9]
+LUT4        ---     0.848              A to Z              i6_4_lut
+Route         1   e 1.940                                  n14
+LUT4        ---     0.848              B to Z              i7_4_lut
+Route        10   e 3.321                                  n152
+LUT4        ---     0.848              B to Z              i1_2_lut_rep_17
+Route         2   e 2.355                                  n1768
+LUT4        ---     0.848              B to Z              i2_3_lut_rep_12_4_lut
+Route         3   e 2.599                                  n1763
+MUXL5       ---     0.401           BLUT to Z              i1222
+Route         1   e 1.940                                  n1803
+LUT4        ---     0.848              A to Z              n1803_bdd_3_lut
+Route         1   e 0.020                                  n1804
+MUXL5       ---     0.401           ALUT to Z              i1226
+Route         1   e 1.940                                  n1808
+LUT4        ---     0.848              C to Z              i1_2_lut_3_lut_adj_11
+Route         9   e 3.258                                  clk_c_enable_9
+                  --------
+                   26.501  (25.1% logic, 74.9% route), 9 logic levels.
+
+Warning: 26.991 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets armed_N_85]              |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets trigger_c]               |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets arm_toggle_s1_N_92]      |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|    26.991 ns|     9 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+clk_c_enable_9                          |       9|    1071|     68.00%
+                                        |        |        |
+n1808                                   |       1|    1071|     68.00%
+                                        |        |        |
+n152                                    |      10|     824|     52.32%
+                                        |        |        |
+n1807                                   |       1|     576|     36.57%
+                                        |        |        |
+n1804                                   |       1|     486|     30.86%
+                                        |        |        |
+n14                                     |       1|     412|     26.16%
+                                        |        |        |
+n1806                                   |       1|     342|     21.71%
+                                        |        |        |
+n755                                    |      16|     256|     16.25%
+                                        |        |        |
+n1717                                   |       1|     256|     16.25%
+                                        |        |        |
+n1768                                   |       2|     243|     15.43%
+                                        |        |        |
+n1803                                   |       1|     243|     15.43%
+                                        |        |        |
+n1739                                   |       1|     234|     14.86%
+                                        |        |        |
+n1741                                   |       1|     225|     14.29%
+                                        |        |        |
+n1742                                   |       1|     216|     13.71%
+                                        |        |        |
+n1776                                   |       1|     207|     13.14%
+                                        |        |        |
+n10                                     |       1|     206|     13.08%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 1575  Score: 21733413
+
+Constraints cover  1575 paths, 86 nets, and 245 connections (77.8% coverage)
+
+
+Peak memory: 224133120 bytes, TRCE: 1511424 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

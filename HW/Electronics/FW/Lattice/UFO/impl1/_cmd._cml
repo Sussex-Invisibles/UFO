@@ -1,0 +1,1 @@
+-link -encrypt -top NoName -osyn /home/tony/Lattice/UFO/impl1/synwork/impl1_comp.srs /home/tony/Lattice/UFO/impl1/synwork/layer0.srs  -jobname linker  

@@ -2402,16 +2402,4 @@ Text Label 15500 11200 0    50   ~ 0
 INITN
 Text Label 15500 11400 0    50   ~ 0
 PROGRAMN
-Text GLabel 14350 12500 0    50   Input ~ 0
-INITN
-Wire Wire Line
-	14750 12500 14350 12500
-Text GLabel 14350 12600 0    50   Input ~ 0
-PROGRAMN
-Wire Wire Line
-	14750 12600 14350 12600
-Text GLabel 14350 12700 0    50   Input ~ 0
-DONE
-Wire Wire Line
-	14750 12700 14350 12700
 $EndSCHEMATC

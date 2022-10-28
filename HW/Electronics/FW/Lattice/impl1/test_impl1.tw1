@@ -1,0 +1,448 @@
+
+Loading design for application trce from file test_impl1_map.ncd.
+Design name: ufo
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3D-4300ZC
+Package:     QFN72
+Performance: 2
+Loading device for application trce from file 'se5c4300.nph' in environment: /usr/local/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 9.
+Performance Hardware Data Status:   Final          Version 2.2.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Tue Jan 11 15:06:24 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o test_impl1.tw1 -gui -msgset /home/tony/Lattice/promote.xml test_impl1_map.ncd test_impl1.prf 
+Design file:     test_impl1_map.ncd
+Preference file: test_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,2
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+2 potential circuit loops found in timing analysis.
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 80.257000 MHz ;
+            999 items scored, 619 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 7.525ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              pulse_timeout_237__i15  (from clk_c +)
+   Destination:    FF         Data in        led_arm__i1  (to clk_c +)
+                   FF                        led_arm__i0
+
+   Delay:              19.467ns  (37.1% logic, 62.9% route), 8 logic levels.
+
+ Constraint Details:
+
+     19.467ns physical path delay SLICE_3 to SLICE_11 exceeds
+     12.460ns delay constraint less
+      0.518ns CE_SET requirement (totaling 11.942ns) by 7.525ns
+
+ Physical Path Details:
+
+      Data path SLICE_3 to SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    SLICE_3.CLK to     SLICE_3.Q0 SLICE_3 (from clk_c)
+ROUTE         2   e 1.656     SLICE_3.Q0 to    SLICE_39.B0 pulse_timeout_15
+CTOF_DEL    ---     0.849    SLICE_39.B0 to    SLICE_39.F0 SLICE_39
+ROUTE         1   e 1.656    SLICE_39.F0 to    SLICE_24.B1 n14
+CTOF_DEL    ---     0.849    SLICE_24.B1 to    SLICE_24.F1 SLICE_24
+ROUTE        10   e 1.656    SLICE_24.F1 to    SLICE_25.B1 n152
+CTOF_DEL    ---     0.849    SLICE_25.B1 to    SLICE_25.F1 SLICE_25
+ROUTE         1   e 0.648    SLICE_25.F1 to    SLICE_25.B0 n1767
+CTOF_DEL    ---     0.849    SLICE_25.B0 to    SLICE_25.F0 SLICE_25
+ROUTE         1   e 1.656    SLICE_25.F0 to    SLICE_23.A0 n1674
+CTOF_DEL    ---     0.849    SLICE_23.A0 to    SLICE_23.F0 SLICE_23
+ROUTE         1   e 1.656    SLICE_23.F0 to *6/SLICE_19.B1 n1739
+CTOOFX_DEL  ---     1.255 *6/SLICE_19.B1 to *SLICE_19.OFX0 i1226/SLICE_19
+ROUTE         1   e 1.656 *SLICE_19.OFX0 to    SLICE_35.C1 n1808
+CTOF_DEL    ---     0.849    SLICE_35.C1 to    SLICE_35.F1 SLICE_35
+ROUTE         5   e 1.656    SLICE_35.F1 to    SLICE_11.CE clk_c_enable_9 (to clk_c)
+                  --------
+                   19.467   (37.1% logic, 62.9% route), 8 logic levels.
+
+Warning:  50.038MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "arm_toggle_s1_N_92" 307.598000 MHz ;
+            1 item scored, 1 timing error detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.006ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              arm_toggle_117  (from trigger_c +)
+   Destination:    FF         Data in        arm_toggle_I_0_146  (to arm_toggle_s1_N_92 +)
+
+   Delay:               2.534ns  (34.6% logic, 65.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      2.534ns physical path delay SLICE_9 to SLICE_35 exceeds
+      3.251ns delay constraint less
+      0.723ns M_SET requirement (totaling 2.528ns) by 0.006ns
+
+ Physical Path Details:
+
+      Data path SLICE_9 to SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878    SLICE_9.CLK to     SLICE_9.Q0 SLICE_9 (from trigger_c)
+ROUTE         2   e 1.656     SLICE_9.Q0 to    SLICE_35.M0 arm_toggle (to arm_toggle_s1_N_92)
+                  --------
+                    2.534   (34.6% logic, 65.4% route), 1 logic levels.
+
+Warning: 307.031MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "trigger_c" 307.598000 MHz ;
+            2 items scored, 2 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.528ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i394  (from armed_N_85 +)
+   Destination:    FF         Data in        toggle_118  (to trigger_c +)
+
+   Delay:               3.384ns  (51.0% logic, 49.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.384ns physical path delay SLICE_15 to SLICE_18 exceeds
+      3.251ns delay constraint less
+      0.395ns DIN_SET requirement (totaling 2.856ns) by 0.528ns
+
+ Physical Path Details:
+
+      Data path SLICE_15 to SLICE_18:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.878   SLICE_15.CLK to    SLICE_15.Q0 SLICE_15 (from armed_N_85)
+ROUTE         6   e 1.656    SLICE_15.Q0 to    SLICE_18.B0 n916
+CTOF_DEL    ---     0.849    SLICE_18.B0 to    SLICE_18.F0 SLICE_18
+ROUTE         2   e 0.001    SLICE_18.F0 to   SLICE_18.DI0 n1772 (to trigger_c)
+                  --------
+                    3.384   (51.0% logic, 49.0% route), 2 logic levels.
+
+Warning: 264.620MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 80.257000 MHz ;   |   80.257 MHz|   50.038 MHz|   8 *
+                                        |             |             |
+FREQUENCY NET "arm_toggle_s1_N_92"      |             |             |
+307.598000 MHz ;                        |  307.598 MHz|  307.031 MHz|   1 *
+                                        |             |             |
+FREQUENCY NET "trigger_c" 307.598000    |             |             |
+MHz ;                                   |  307.598 MHz|  264.620 MHz|   2 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+3 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+n1808                                   |       1|     535|     86.01%
+                                        |        |        |
+clk_c_enable_9                          |       5|     535|     86.01%
+                                        |        |        |
+n152                                    |      10|     444|     71.38%
+                                        |        |        |
+n14                                     |       1|     224|     36.01%
+                                        |        |        |
+n1806                                   |       1|     170|     27.33%
+                                        |        |        |
+n1803                                   |       1|     130|     20.90%
+                                        |        |        |
+n1768                                   |       2|     129|     20.74%
+                                        |        |        |
+n1739                                   |       1|     120|     19.29%
+                                        |        |        |
+n1776                                   |       1|     115|     18.49%
+                                        |        |        |
+n1741                                   |       1|     115|     18.49%
+                                        |        |        |
+n10                                     |       1|     112|     18.01%
+                                        |        |        |
+n1763                                   |       3|      77|     12.38%
+                                        |        |        |
+n1717                                   |       1|      72|     11.58%
+                                        |        |        |
+n755                                    |       9|      72|     11.58%
+                                        |        |        |
+n1802                                   |       1|      65|     10.45%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: trigger_c   Source: trigger.PAD   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: armed_N_85   Source: SLICE_27.F0
+      Covered under: FREQUENCY NET "trigger_c" 307.598000 MHz ;   Transfers: 1
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 14
+   Covered under: FREQUENCY NET "clk_c" 80.257000 MHz ;
+
+   Data transfers from:
+   Clock Domain: armed_N_85   Source: SLICE_27.F0
+      Covered under: FREQUENCY NET "clk_c" 80.257000 MHz ;   Transfers: 1
+
+Clock Domain: armed_N_85   Source: SLICE_27.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: arm_toggle_s1_N_92   Source: SLICE_18.F1   Loads: 1
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: trigger_c   Source: trigger.PAD
+      Covered under: FREQUENCY NET "arm_toggle_s1_N_92" 307.598000 MHz ;   Transfers: 1
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 622  Score: 2389763
+Cumulative negative slack: 2389763
+
+Constraints cover 1002 paths, 3 nets, and 247 connections (87.59% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Tue Jan 11 15:06:24 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o test_impl1.tw1 -gui -msgset /home/tony/Lattice/promote.xml test_impl1_map.ncd test_impl1.prf 
+Design file:     test_impl1_map.ncd
+Preference file: test_impl1.prf
+Device,speed:    LCMXO3D-4300ZC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+2 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_c" 80.257000 MHz ;
+            999 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.489ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              pulse_timeout_237__i8  (from clk_c +)
+   Destination:    FF         Data in        pulse_timeout_237__i8  (to clk_c +)
+
+   Delay:               0.457ns  (99.8% logic, 0.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.457ns physical path delay SLICE_0 to SLICE_0 meets
+     -0.032ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.032ns) by 0.489ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.257    SLICE_0.CLK to     SLICE_0.Q1 SLICE_0 (from clk_c)
+ROUTE        11   e 0.000     SLICE_0.Q1 to     SLICE_0.A1 pulse_timeout_8
+CTOF_DEL    ---     0.199     SLICE_0.A1 to     SLICE_0.F1 SLICE_0
+ROUTE         1   e 0.001     SLICE_0.F1 to    SLICE_0.DI1 n77 (to clk_c)
+                  --------
+                    0.457   (99.8% logic, 0.2% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "arm_toggle_s1_N_92" 307.598000 MHz ;
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.324ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              arm_toggle_117  (from trigger_c +)
+   Destination:    FF         Data in        arm_toggle_I_0_146  (to arm_toggle_s1_N_92 +)
+
+   Delay:               0.257ns  (100.0% logic, 0.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.257ns physical path delay SLICE_9 to SLICE_35 meets
+     -0.067ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.067ns) by 0.324ns
+
+ Physical Path Details:
+
+      Data path SLICE_9 to SLICE_35:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.257    SLICE_9.CLK to     SLICE_9.Q0 SLICE_9 (from trigger_c)
+ROUTE         2   e 0.000     SLICE_9.Q0 to    SLICE_35.M0 arm_toggle (to arm_toggle_s1_N_92)
+                  --------
+                    0.257   (100.0% logic, 0.0% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "trigger_c" 307.598000 MHz ;
+            2 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.489ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i394  (from armed_N_85 +)
+   Destination:    FF         Data in        toggle_118  (to trigger_c +)
+
+   Delay:               0.457ns  (99.8% logic, 0.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.457ns physical path delay SLICE_15 to SLICE_18 meets
+     -0.032ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.032ns) by 0.489ns
+
+ Physical Path Details:
+
+      Data path SLICE_15 to SLICE_18:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.257   SLICE_15.CLK to    SLICE_15.Q0 SLICE_15 (from armed_N_85)
+ROUTE         6   e 0.000    SLICE_15.Q0 to    SLICE_18.B0 n916
+CTOF_DEL    ---     0.199    SLICE_18.B0 to    SLICE_18.F0 SLICE_18
+ROUTE         2   e 0.001    SLICE_18.F0 to   SLICE_18.DI0 n1772 (to trigger_c)
+                  --------
+                    0.457   (99.8% logic, 0.2% route), 2 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 80.257000 MHz ;   |     0.000 ns|     0.489 ns|   2  
+                                        |             |             |
+FREQUENCY NET "arm_toggle_s1_N_92"      |             |             |
+307.598000 MHz ;                        |     0.000 ns|     0.324 ns|   1  
+                                        |             |             |
+FREQUENCY NET "trigger_c" 307.598000    |             |             |
+MHz ;                                   |     0.000 ns|     0.489 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: trigger_c   Source: trigger.PAD   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: armed_N_85   Source: SLICE_27.F0
+      Covered under: FREQUENCY NET "trigger_c" 307.598000 MHz ;   Transfers: 1
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 14
+   Covered under: FREQUENCY NET "clk_c" 80.257000 MHz ;
+
+   Data transfers from:
+   Clock Domain: armed_N_85   Source: SLICE_27.F0
+      Covered under: FREQUENCY NET "clk_c" 80.257000 MHz ;   Transfers: 1
+
+Clock Domain: armed_N_85   Source: SLICE_27.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: arm_toggle_s1_N_92   Source: SLICE_18.F1   Loads: 1
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: trigger_c   Source: trigger.PAD
+      Covered under: FREQUENCY NET "arm_toggle_s1_N_92" 307.598000 MHz ;   Transfers: 1
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1002 paths, 3 nets, and 245 connections (86.88% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 622 (setup), 0 (hold)
+Score: 2389763 (setup), 0 (hold)
+Cumulative negative slack: 2389763 (2389763+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

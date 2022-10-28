@@ -1,0 +1,25 @@
+----------------------------------------------------------------------
+Report for cell ufo.behv
+
+Register bits: 42 of 6900 (1%)
+Latch bits:      2
+PIC Latch:       0
+I/O cells:       10
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        9       100.0
+                            FD1P3AX        9       100.0
+                             FD1S1A        1       100.0
+                             FD1S1D        1       100.0
+                            FD1S3AX        4       100.0
+                            FD1S3IX       29       100.0
+                                GSR        1       100.0
+                                 IB        2       100.0
+                                INV        4       100.0
+                                 OB        8       100.0
+                           ORCALUT4       93       100.0
+                                PUR        1       100.0
+                                VHI        1       100.0
+                                VLO        1       100.0
+                            
+                         TOTAL           164           

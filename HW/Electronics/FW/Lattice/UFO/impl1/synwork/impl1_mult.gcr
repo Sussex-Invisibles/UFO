@@ -1,0 +1,37 @@
+i un1_timed_out_1
+m 0 0
+u 1 1
+n ckid0_0 {t:armed.C} Clock source is invalid for GCC
+p {t:un1_timed_out_1.OUT[0]}{t:armed.C}
+e ckid0_0 {t:armed.C} latr
+d ckid0_0 {t:un1_timed_out_1.OUT[0]} mux Clock source is invalid for GCC
+i clk
+m 0 0
+u 10 25
+p {p:clk}{t:led_arm[7].C}
+e ckid0_1 {t:led_arm[7].C} dffre
+c ckid0_1 {p:clk} port Unsupported/too complex instance on clock path
+i arm_toggle_s1_0_sqmuxa
+m 0 0
+u 1 1
+n ckid0_2 {t:arm_toggle_s1.C} Clock source is invalid for GCC
+p {t:arm_toggle_s1_0_sqmuxa.OUT}{t:arm_toggle_s1.C}
+e ckid0_2 {t:arm_toggle_s1.C} latr
+d ckid0_2 {t:arm_toggle_s1_0_sqmuxa.OUT} and Unable to find a clock in input cone
+i trigger
+m 0 0
+u 2 2
+p {p:trigger}{t:fire.C}
+e ckid0_3 {t:fire.C} dffr
+c ckid0_3 {p:trigger} port Unsupported/too complex instance on clock path
+i fire
+m 0 0
+u 0 0
+i timed_out
+m 0 0
+u 0 0
+i arm_toggle
+m 0 0
+u 0 0
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

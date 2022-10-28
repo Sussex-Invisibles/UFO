@@ -1,0 +1,101 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tony/Lattice/UFO
+Etestbench
+Z1 w1642585754
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 20
+R0
+Z5 8/home/tony/Lattice/UFO/ufo_tb.vhd
+Z6 F/home/tony/Lattice/UFO/ufo_tb.vhd
+l0
+L25 1
+VVNm;T_NhzCSEdd[Y>5LO00
+!s100 DhX?P9?7<f<Q6;Ocez<e>3
+Z7 OT;C;2020.3;71
+32
+Z8 !s110 1643126548
+!i10b 1
+Z9 !s108 1643126548.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|/home/tony/Lattice/UFO/ufo_tb.vhd|
+Z11 !s107 /home/tony/Lattice/UFO/ufo_tb.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+R4
+Z14 DEx4 work 9 testbench 0 22 VNm;T_NhzCSEdd[Y>5LO00
+!i122 20
+l57
+Z15 L28 177
+Z16 V7Zb9Rof;k<c8h6IUi^Vc[0
+Z17 !s100 CVb7UC3^_3]KWEbK?LBJH2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eufo
+Z18 w1642585631
+Z19 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z20 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R4
+!i122 18
+R0
+Z21 8/home/tony/Lattice/ufo.vhd
+Z22 F/home/tony/Lattice/ufo.vhd
+l0
+L6 1
+V?5nal784_UoHoR6lSn2?V0
+!s100 KU_a=o_DBob]lXj=Gic[i2
+R7
+32
+Z23 !s110 1642585639
+!i10b 1
+Z24 !s108 1642585639.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|/home/tony/Lattice/ufo.vhd|
+Z26 !s107 /home/tony/Lattice/ufo.vhd|
+!i113 1
+R12
+R13
+Abehv
+R19
+R20
+R2
+R3
+R4
+DEx4 work 3 ufo 0 22 ?5nal784_UoHoR6lSn2?V0
+!i122 18
+l34
+L19 156
+VTinzgbejJYiPh:1k]RYG_0
+!s100 ]TB26`hc8@S^fbcll7Yz:3
+R7
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13

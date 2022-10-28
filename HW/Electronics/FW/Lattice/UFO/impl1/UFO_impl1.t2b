@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO"  

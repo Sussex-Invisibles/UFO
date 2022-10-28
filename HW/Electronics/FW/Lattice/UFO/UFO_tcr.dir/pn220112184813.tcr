@@ -1,0 +1,10 @@
+#Start recording tcl command: 1/12/2022 16:18:47
+#Project Location: /home/tony/Lattice/UFO; Project name: UFO
+prj_project open "/home/tony/Lattice/UFO/UFO.ldf"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 1/12/2022 18:48:13

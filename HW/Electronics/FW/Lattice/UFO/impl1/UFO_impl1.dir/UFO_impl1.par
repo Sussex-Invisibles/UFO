@@ -1,0 +1,38 @@
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Sep 15 12:46:46 2022
+
+/usr/local/diamond/3.12/ispfpga/bin/lin64/par -f UFO_impl1.p2t
+UFO_impl1_map.ncd UFO_impl1.dir UFO_impl1.prf -gui -msgset
+/home/tony/home/Neutrino/UFO/HW/Electronics/FW/Lattice/UFO/promote.xml
+
+
+Preference file: UFO_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_2   *      0            -61.608      739480       -1.104       1104         03           Completed
+5_8          0            -63.360      789300       -1.079       1079         03           Completed
+5_5          0            -67.632      785044       -1.079       1079         03           Completed
+5_1          0            -68.944      843688       -0.888       888          04           Completed
+5_6          0            -69.488      808788       -0.885       885          04           Completed
+5_3          -            -            -            -            -            04           Skipped
+5_4          -            -            -            -            -            03           Skipped
+5_7          -            -            -            -            -            03           Skipped
+5_9          -            -            -            -            -            03           Skipped
+5_10         -            -            -            -            -            03           Skipped
+
+* : Design saved.
+
+INFO - par: Iterations 5_3, 5_4, 5_7, 5_9, and 5_10 were skipped during the PAR process to save total runtime, as it was determined they would not improve upon a timing result achieved in a previous iteration.
+
+Total (real) run time for 10-seed: 33 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.

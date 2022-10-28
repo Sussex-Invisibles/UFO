@@ -1,0 +1,4 @@
+ckid0_0:@|S:un1_timed_out_1.OUT[0]@|E:armed@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
+ckid0_1:@|S:clk@|E:led_arm[7]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
+ckid0_2:@|S:arm_toggle_s1_0_sqmuxa.OUT@|E:arm_toggle_s1@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2
+ckid0_3:@|S:trigger@|E:fire@|F:@syn_dgcc_clockid0_3==1@|M:ClockId_0_3
